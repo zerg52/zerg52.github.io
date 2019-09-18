@@ -9,11 +9,22 @@ body {
   margin: 0;
   color: rgba(188,195,208,1);
 }
+header {
+  font-size: 20vh;
+  animation-name: logo;
+  animation-duration: infinite;
+}
+
+@keyframes logo {
+  0%  {opacity: 1;}
+  100% {opacity: 0;}
+}
 .navbar
 {
    color: rgba(188,195,208,1);
 }
 .logobox {
+  color: rgba(188,195,208,1);
 
 }
 .headlink {
