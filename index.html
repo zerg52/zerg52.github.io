@@ -8,19 +8,15 @@
 
   </head>
   <body>
-    <div class = "biglogo">
+    <div id="hidetext" class = "biglogo">
       <div>VA</div>
     </div>
   </body>
   <script type="text/javascript" charset="utf-8">
 
   $(document).ready(function(){
-    function second_passed() {
-      $("div").fadeTo(1000, 1, function() {
-        location.replace("\index2.html")
-      });
-    }
-    setTimeout(second_passed, 1000)
-  });
+      $("#hidetext").fadeOut(2000);
+    })
 </script>
+
 </html>

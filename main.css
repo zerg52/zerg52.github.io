@@ -8,12 +8,8 @@ body {
 .biglogo  {
   margin: 0;
   color: rgba(188,195,208,1);
+  font-size: 20vh
 }
-div {
-  font-size: 20vh;
-
-}
-
 .navbar
 {
    color: rgba(188,195,208,1);
