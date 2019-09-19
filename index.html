@@ -4,22 +4,32 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="\main.css">
     <title>VIGONKA DESIGN</title>
+    <style media="screen">
+    body {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    </style>
+  
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
-    <div id="hidetext" class = "biglogo">
+    <div id="hidelogo" class = "biglogo">
       <div>VA</div>
     </div>
   </body>
   <script type="text/javascript" charset="utf-8">
 
   $(document).ready(function(){
-			function second_passed() {
-				$('#hidetext').fadeOut(2000, function() {
+			function hide_obj() {
+				$('#hidelogo').fadeOut(2000, function() {
 					location.replace("/index2.html")
 				});
 			}
-			setTimeout(second_passed, 2000)
+			setTimeout(hide_obj, 0)
 		});
 </script>
 

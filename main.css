@@ -1,23 +1,32 @@
-body {
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
 .biglogo  {
   margin: 0;
   color: rgba(188,195,208,1);
   font-size: 20vh
-}
-.navbar
-{
-   color: rgba(188,195,208,1);
-}
-.logobox {
-  color: rgba(188,195,208,1);
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background: white;
+  }
+  .navbar {
 
-}
-.headlink {
-
-}
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: white;
+    border-bottom: 2px solid rgb(235, 235, 240);
+  }
+  .navbar a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: black;
+    flex: 1;
+  }
+  .navbarLogo{
+    flex: 2;
+    color: gray;
+  }
