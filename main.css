@@ -3,6 +3,17 @@
     padding: 0;
     margin: 0;
   }
+  @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-moz-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-o-keyframes fade-in {  0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+body {
+  -webkit-animation: fade-in 2s linear;
+  -moz-animation: fade-in 2s linear;
+  -o-animation: fade-in 2s linear;
+  animation: fade-in 2s linear;
+  }
   .navbar {
 
     list-style: none;
