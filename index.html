@@ -13,13 +13,14 @@
   </body>
   <script type="text/javascript" charset="utf-8">
 
-  $(document).ready(function() {
-    function hideobject () {
-      $("#hidetext").fadeOut(2000)
-    }
-  });
-    setTimeout(hideobject,2000);
-    document.location.replace("/index2.html");
+  $(document).ready(function(){
+			function second_passed() {
+				$('#hidetext').fadeOut(2000, function() {
+					location.replace("/index2.html")
+				});
+			}
+			setTimeout(second_passed, 2000)
+		});
 </script>
 
 </html>
