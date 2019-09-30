@@ -4,14 +4,81 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="\main.css">
     <title>VIGONKA</title>
+    <style media="screen">
+    *{
+padding:0px;
+margin:0px;
+}
+.marquee{
+display:grid;
+grid-template-rows: 4vmin 4vmin;
+grid-template-columns: 1fr 8vmin;
+grid-template-areas:
+"marquee_1 button_1"
+"marquee_2 button_1"
+}
+.button_1 {
+grid-area: button_1;
+position:relative;
+background:gray;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+.button_1 p {
+  margin: 0;
+  padding:0;
+  font-size: 4vmin;
+}
+ .button_1:hover {
+
+ background: transparent;
+
+}
+.marquee_1 {
+grid-area: marquee_1;
+padding:0px;
+margin:0px;
+}
+.marquee_2 {
+grid-area: marquee_2;
+padding:0px;
+margin:0px;
+}
+    </style>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
   </head>
   <body>
-      <ul class="navbar">
-        <li class = "navbarLogo"><a  href="index.html">VA</a></li>
-        <li><a href="#">ДИЗАЙН</a></li>
-        <li><a href="#">ЦЕНЫ</a></li>
-        <li><a href="#">КОНТАКТЫ</a></li>
-      </ul>
+    <div class="marquee">
+<div class="button_1"><p>►</p></div>
+<div class="marquee_1" style="overflow:hidden;color:gray;">VIGONKA DESIGN  FROM OREL STATE ARCHITECTURE GRAPHIC DESIGN VIGONKA DESIGN FUTURE DESIGN VIGONKA DESIGN BEST EVER VIGONKA SUPER STARS VIGONKA DESIGN - MVP  IN THE GAME VIGONKA DESIGN SHINING LIKE A DIAMOND</div>
+<div class="marquee_2" style="overflow:hidden;">ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН</div>
+</div>
   </body>
+  <script>
+  $(function() {
+$('.marquee_1').marquee({
+  duration: 9000,
+  startVisible: true,
+  duplicated: true
+});
+});
+//
+$(function() {
+$('.marquee_2').marquee({
+direction: "right",
+  duration: 15000,
+  startVisible: true,
+  duplicated: true
+});
+});
+var $mq = $('.marquee_1, .marquee_2')
+//Pause
+$('.button_1').click(function(){
+$mq.marquee('toggle');
+});
+  </script>
 </html>
