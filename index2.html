@@ -6,98 +6,99 @@
     <title>VIGONKA</title>
     <style media="screen">
     *{
-       padding:0px;
-       margin:0px;
-      }
-      :root {
-        --strH:18px;
-      }
-      body {
-        background:#ededed;
-      }
-    /* \/EN-RUS TRANSLATE\/ */
-      .lang {
-        padding:0px;
-        margin:0px;
-        position:absolute;
-        display:flex;
-        width:80px;
-        height: calc(var(--strH)*2);
-        margin-top:30px;
-        margin-left:80%;
-        background: white;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        color:gray;
-        }
-      input[type="radio"] {
-      background: none;
-      outline: none;
-      position: relative;
-      border:none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
+   padding:0px;
+   margin:0px;
+  }
+  :root {
+    --strH:18px;
+  }
+  body {
+    background:#ededed;
+  }
+/* EN - RUS TRANSLATE */
+  .lang {
+    padding:0px;
+    margin:0px;
+    position:absolute;
+    display:flex;
+    width:80px;
+    height: calc(var(--strH)*2);
+    margin-top:30px;
+    margin-left:80%;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color:gray;
+    font-family: "Arial";
+    background:#ededed;
     }
-    input:checked +span{
-      color:black;
-    }
-      /* ^^^EN - RUS TRANSLATE^^^ */
-      .marquee{
+  input[type="radio"] {
+  background: none;
+  outline: none;
+  position: relative;
+  border:none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input:checked +span{
+  color:black;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  border-color:gray;
+}
+  /* EN - RUS TRANSLATE */
+  .marquee{
+    display:grid;
+    font-family: "Arial";
+    font-style: italic;
+    font-weight: inherit;
+    font-size: var(--strH);
+    grid-template-rows: 30px var(--strH) var(--strH);
+    grid-template-columns: 1fr calc(var(--strH)*2);
+    grid-template-areas:
+    "space space"
+    "marquee_1 button_1"
+    "marquee_2 button_1"
+  }
 
-        display:grid;
-        padding:0px;
-        margin:0px;
-        font-family: "Arial";
-        font-style: italic;
-        font-weight: inherit;
-        font-size: var(--strH);
-        grid-template-rows: 30px var(--strH) var(--strH);
-        grid-template-columns: 1fr calc(var(--strH)*2);
-        grid-template-areas:
-        "space space"
-        "marquee_1 button_1"
-        "marquee_2 button_1"
-      }
-
-      .space {
-        grid-area: space_1;
-      }
-      .button_1 {
-        grid-area: button_1;
-        background:#ededed;
-        display: flex;
-        align-items: center;
-        justify-content:center;
-        cursor: pointer;
-
-        }
-
-         .button_1 p:hover {
-
-         color:gray;
-        }
-
-        .marquee_1 {
-        grid-area: marquee_1;
-        padding:0px;
-        margin:0px;
-        font-weight: 100;
-        display: inline-grid;;
-        align-items: center;
-
-        }
-
-        .marquee_2 {
-        grid-area: marquee_2;
-        padding:0px;
-        margin:0px;
-        display: inline-grid;;
-        align-items: center;
-
-        }
+  .space {
+    grid-area: space_1;
+  }
+  .button_1 {
+    grid-area: button_1;
+    background:#ededed;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    cursor: pointer;
 
     }
+
+     .button_1 p:hover {
+
+     color:gray;
+    }
+
+    .marquee_1 {
+    grid-area: marquee_1;
+    padding:0px;
+    margin:0px;
+    font-weight: 100;
+    display: inline-grid;;
+    align-items: center;
+
+    }
+
+    .marquee_2 {
+    grid-area: marquee_2;
+    padding:0px;
+    margin:0px;
+    display: inline-grid;;
+    align-items: center;
+
+    }
+     
     </style>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
