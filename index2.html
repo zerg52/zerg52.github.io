@@ -6,45 +6,55 @@
     <title>VIGONKA</title>
     <style media="screen">
     *{
-padding:0px;
-margin:0px;
-}
-.marquee{
-display:grid;
-grid-template-rows: 4vmin 4vmin;
-grid-template-columns: 1fr 8vmin;
-grid-template-areas:
-"marquee_1 button_1"
-"marquee_2 button_1"
-}
-.button_1 {
-grid-area: button_1;
-position:relative;
-background:gray;
-display: flex;
-align-items: center;
-justify-content:center;
-}
-.button_1 p {
-  margin: 0;
-  padding:0;
-  font-size: 4vmin;
-}
- .button_1:hover {
+   padding:0px;
+    margin:0px;
+  }
+  .marquee{
+    display:grid;
+    grid-template-rows: 2vmin 2vmin;
+    grid-template-columns: 1fr 4vmin;
+    grid-template-areas:
+    "marquee_1 button_1"
+    "marquee_2 button_1"
+  }
+  .button_1 {
+    grid-area: button_1;
+    position:relative;
+    background:gray;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    }
+    .button_1 p {
+      margin: 0;
+      padding:0;
+      font-size: 3vmin;
+    }
+     .button_1:hover {
 
- background: transparent;
+     background: transparent;
 
-}
-.marquee_1 {
-grid-area: marquee_1;
-padding:0px;
-margin:0px;
-}
-.marquee_2 {
-grid-area: marquee_2;
-padding:0px;
-margin:0px;
-}
+    }
+    .marquee_1 {
+    grid-area: marquee_1;
+    padding:0px;
+    margin:0px;
+    display: inline-grid;;
+    align-items: center;
+    }
+    .marquee_1 p{
+     font-size:2vmin;
+    }
+    .marquee_2 {
+    grid-area: marquee_2;
+    padding:0px;
+    margin:0px;
+    display: inline-grid;;
+    align-items: center;
+    }
+     .marquee_2 p{
+     font-size:2vmin;
+    }
     </style>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
