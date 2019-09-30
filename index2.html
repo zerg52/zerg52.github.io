@@ -6,59 +6,97 @@
     <title>VIGONKA</title>
     <style media="screen">
     *{
-   padding:0px;
-   margin:0px;
-  }
-  body {
-    background:#ededed;
-  }
-  .marquee{
-    display:grid;
-    font-family: "Arial";
-    font-style: italic;
-    font-weight: lighter;
-    font-size: 18px;
-    grid-template-rows: 30px 18px 18px;
-    grid-template-columns: 1fr 36px;
-    grid-template-areas:
-    "space space"
-    "marquee_1 button_1"
-    "marquee_2 button_1"
-  }
-
-  .space {
-    grid-area: space_1;
-  }
-  .button_1 {
-    grid-area: button_1;
-    position:relative;
-    background:#ededed;
-    display: flex;
-    align-items: center;
-    justify-content:center;
+       padding:0px;
+       margin:0px;
+      }
+      :root {
+        --strH:18px;
+      }
+      body {
+        background:#ededed;
+      }
+    /* \/EN-RUS TRANSLATE\/ */
+      .lang {
+        padding:0px;
+        margin:0px;
+        position:absolute;
+        display:flex;
+        width:80px;
+        height: calc(var(--strH)*2);
+        margin-top:30px;
+        margin-left:80%;
+        background: white;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color:gray;
+        }
+      input[type="radio"] {
+      background: none;
+      outline: none;
+      position: relative;
+      border:none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
     }
-
-     .button_1 p:hover {
-
-     color:gray;
+    input:checked +span{
+      color:black;
     }
+      /* ^^^EN - RUS TRANSLATE^^^ */
+      .marquee{
 
-    .marquee_1 {
-    grid-area: marquee_1;
-    padding:0px;
-    margin:0px;
-    display: inline-grid;;
-    align-items: center;
-    margin-top:1.5px;
-    }
+        display:grid;
+        padding:0px;
+        margin:0px;
+        font-family: "Arial";
+        font-style: italic;
+        font-weight: inherit;
+        font-size: var(--strH);
+        grid-template-rows: 30px var(--strH) var(--strH);
+        grid-template-columns: 1fr calc(var(--strH)*2);
+        grid-template-areas:
+        "space space"
+        "marquee_1 button_1"
+        "marquee_2 button_1"
+      }
 
-    .marquee_2 {
-    grid-area: marquee_2;
-    padding:0px;
-    margin:0px;
-    display: inline-grid;;
-    align-items: center;
-    margin-top:-3px;
+      .space {
+        grid-area: space_1;
+      }
+      .button_1 {
+        grid-area: button_1;
+        background:#ededed;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        cursor: pointer;
+
+        }
+
+         .button_1 p:hover {
+
+         color:gray;
+        }
+
+        .marquee_1 {
+        grid-area: marquee_1;
+        padding:0px;
+        margin:0px;
+        font-weight: 100;
+        display: inline-grid;;
+        align-items: center;
+
+        }
+
+        .marquee_2 {
+        grid-area: marquee_2;
+        padding:0px;
+        margin:0px;
+        display: inline-grid;;
+        align-items: center;
+
+        }
+
     }
     </style>
 
@@ -67,11 +105,21 @@
 <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
   </head>
   <body>
-    <<div class="marquee">
-<div class="space_1"></div>
-<div class="button_1"><p>►</p></div>
-<div class="marquee_1" style="overflow:hidden;color:gray;">VIGONKA DESIGN  FROM OREL STATE ARCHITECTURE GRAPHIC DESIGN VIGONKA DESIGN FUTURE DESIGN VIGONKA DESIGN BEST EVER VIGONKA SUPER STARS VIGONKA DESIGN - MVP  IN THE GAME VIGONKA DESIGN SHINING LIKE A DIAMOND</div>
-<div class="marquee_2" style="overflow:hidden;">ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН</div>
+    <div class="marquee">
+      <div class="lang">
+      <label>
+      <input type = "radio" name="pos1"><span>ENG</span>
+      </label>
+      <label>
+      <input type = "radio" name="pos1" checked><span>РУС</span>
+      </label>
+       </div>
+      <div class="marquee">
+      <div class="space_1"></div>
+      <div class="button_1"><p>►</p></div>
+      <div class="marquee_1" style="overflow:hidden;color:gray;">VIGONKA DESIGN  FROM OREL STATE ARCHITECTURE GRAPHIC DESIGN VIGONKA DESIGN FUTURE DESIGN VIGONKA DESIGN BEST EVER VIGONKA SUPER STARS VIGONKA DESIGN - MVP  IN THE GAME VIGONKA DESIGN SHINING LIKE A DIAMOND</div>
+      <div class="marquee_2" style="overflow:hidden;">ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН</div>
+      </div>
 </div>
   </body>
   <script>
