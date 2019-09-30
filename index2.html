@@ -7,53 +7,57 @@
     <style media="screen">
     *{
    padding:0px;
-    margin:0px;
+   margin:0px;
+  }
+  body {
+    background:#ededed;
   }
   .marquee{
     display:grid;
-    grid-template-rows: 2vmin 2vmin;
-    grid-template-columns: 1fr 4vmin;
+    font-family: "Arial";
+    font-style: italic;
+    font-size: 18px;
+    grid-template-rows: 30px 18px 18px;
+    grid-template-columns: 1fr 36px;
     grid-template-areas:
+    "space space"
     "marquee_1 button_1"
     "marquee_2 button_1"
+  }
+
+  .space {
+    grid-area: space_1;
   }
   .button_1 {
     grid-area: button_1;
     position:relative;
-    background:gray;
+    background:#ededed;
     display: flex;
     align-items: center;
     justify-content:center;
     }
-    .button_1 p {
-      margin: 0;
-      padding:0;
-      font-size: 3vmin;
-    }
-     .button_1:hover {
 
-     background: transparent;
+     .button_1 p:hover {
 
+     color:gray;
     }
+
     .marquee_1 {
     grid-area: marquee_1;
     padding:0px;
     margin:0px;
     display: inline-grid;;
     align-items: center;
+    margin-top:1.5px;
     }
-    .marquee_1 p{
-     font-size:2vmin;
-    }
+
     .marquee_2 {
     grid-area: marquee_2;
     padding:0px;
     margin:0px;
     display: inline-grid;;
     align-items: center;
-    }
-     .marquee_2 p{
-     font-size:2vmin;
+    margin-top:-3px;
     }
     </style>
 
@@ -62,7 +66,8 @@
 <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
   </head>
   <body>
-    <div class="marquee">
+    <<div class="marquee">
+<div class="space_1"></div>
 <div class="button_1"><p>►</p></div>
 <div class="marquee_1" style="overflow:hidden;color:gray;">VIGONKA DESIGN  FROM OREL STATE ARCHITECTURE GRAPHIC DESIGN VIGONKA DESIGN FUTURE DESIGN VIGONKA DESIGN BEST EVER VIGONKA SUPER STARS VIGONKA DESIGN - MVP  IN THE GAME VIGONKA DESIGN SHINING LIKE A DIAMOND</div>
 <div class="marquee_2" style="overflow:hidden;">ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН</div>
@@ -71,7 +76,7 @@
   <script>
   $(function() {
 $('.marquee_1').marquee({
-  duration: 9000,
+  duration: 15000,
   startVisible: true,
   duplicated: true
 });
