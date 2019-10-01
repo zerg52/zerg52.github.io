@@ -128,9 +128,9 @@ input:checked +span{
   $(document).ready(function() {
       $("#lesen").click(function() {
           $(".text").load("VD.txt", function(){
-              marquee();
+              $('.marquee_1').marquee()
           });
-     }); 
+     });
   });
   //
   $(function() {
