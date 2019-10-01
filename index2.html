@@ -98,7 +98,7 @@ input:checked +span{
     align-items: center;
 
     }
-     
+
     </style>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -119,11 +119,16 @@ input:checked +span{
       <div class="space_1"></div>
       <div class="button_1"><p>►</p></div>
       <div class="marquee_1" style="overflow:hidden;color:gray;">VIGONKA DESIGN  FROM OREL STATE ARCHITECTURE GRAPHIC DESIGN VIGONKA DESIGN FUTURE DESIGN VIGONKA DESIGN BEST EVER VIGONKA SUPER STARS VIGONKA DESIGN - MVP  IN THE GAME VIGONKA DESIGN SHINING LIKE A DIAMOND</div>
-      <div class="marquee_2" style="overflow:hidden;">ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН</div>
+      <div id="target"class="marquee_2" style="overflow:hidden;"></div>
       </div>
 </div>
   </body>
   <script>
+  //
+  $(function(){
+      $( "#target" ).load( "VD.txt" );
+  });
+  //
   $(function() {
 $('.marquee_1').marquee({
   duration: 15000,
