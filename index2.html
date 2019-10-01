@@ -106,33 +106,24 @@ input:checked +span{
 <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
   </head>
   <body>
-    <div class="marquee">
-      <div class="lang">
-      <label>
-      <input type = "radio" name="pos1"><span>ENG</span>
-      </label>
-      <label>
-      <input type = "radio" name="pos1" checked><span>РУС</span>
-      </label>
-       </div>
-      <div class="marquee">
-      <div class="space_1"></div>
-      <div class="button_1"><p>►</p></div>
-      <div class="marquee_1" style="overflow:hidden;color:gray;">VIGONKA DESIGN  FROM OREL STATE ARCHITECTURE GRAPHIC DESIGN VIGONKA DESIGN FUTURE DESIGN VIGONKA DESIGN BEST EVER VIGONKA SUPER STARS VIGONKA DESIGN - MVP  IN THE GAME VIGONKA DESIGN SHINING LIKE A DIAMOND</div>
-      <div class="marquee_2" style="overflow:hidden;"></div>
-      </div>
+    <div>
+    <div class="lang">
+    <label>
+    <input type = "radio" name="pos1"><span>ENG</span>
+    </label>
+    <label>
+    <input type = "radio" name="pos1" checked><span>РУС</span>
+    </label>
+ </div>
+ <div class="marquee">
+    <div class="space_1"></div>
+    <div class="button_1"><p>►</p></div>
+    <div class="marquee_1" style="overflow:hidden;color:gray;">VIGONKA DESIGN  FROM OREL STATE ARCHITECTURE GRAPHIC DESIGN VIGONKA DESIGN FUTURE DESIGN VIGONKA DESIGN BEST EVER VIGONKA SUPER STARS VIGONKA DESIGN - MVP  IN THE GAME VIGONKA DESIGN SHINING LIKE A DIAMOND</div>
+    <div class="marquee_2" style="overflow:hidden;">ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН ВЫГОНКА ДИЗАЙН</div>
+ </div>
 </div>
   </body>
   <script>
-  //
-  $(document).ready(function() {
-      $("#lesen").click(function() {
-          $(".text").load("VD.txt", function(){
-              $('.marquee_1').marquee()
-          });
-     });
-  });
-  //
   $(function() {
 $('.marquee_1').marquee({
   duration: 15000,
