@@ -125,8 +125,16 @@ input:checked +span{
   </body>
   <script>
   //
-  $(function(){
-      $( ".marquee_2" ).load( "VD.txt" );
+  $(document).ready(function() {
+      $("#lesen").click(function() {
+          $.ajax({
+              url : "VD.txt",
+              dataType: "text",
+              success : function (data) {
+                  $(".marquee_2").html(data);
+              }
+          });
+      });
   });
   //
   $(function() {
