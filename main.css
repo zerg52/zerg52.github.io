@@ -12,6 +12,7 @@
     background: #ededed;
   }
 
+
 /* EN - RUS TRANSLATE */
 
   .lang {
@@ -51,6 +52,7 @@ input:checked + span{
 
   .marquee{
     display: grid;
+		z-index: 3;
     display: absolute;
     font-family: "Arial";
     font-style: italic;
@@ -143,6 +145,14 @@ input:checked + span{
     left:10px;
    }
    .nav li:hover {
-     color:gray;
+     color:#363636;
 
    }
+	 .background{
+		width:100%;
+		height:50%;
+		position: fixed;
+		top: 198px;
+    background: linear-gradient(90deg, #b05946, #ff3366);
+		z-index: -1;
+	}
