@@ -157,7 +157,7 @@ input:checked + span{
 		z-index: -1;
 	}
 	.gif img {
-		position:fixed;
+		position: absolute;
 		left:410px;
 		height:80%;
 }
