@@ -57,6 +57,7 @@
 				objLoader.load( 'ant.obj', function ( object ) {
 					var head = object;
 					head.material = cubeMaterial;
+          scene.add(head);
 				} );
 				//renderer
 				renderer = new THREE.WebGLRenderer();
