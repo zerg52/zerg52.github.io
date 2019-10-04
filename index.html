@@ -12,8 +12,8 @@
 		</div>
 
 		<script type="module">
-			import * as THREE from '../build/three.module.js';
-			import { OBJLoader } from './jsm/loaders/OBJLoader.js';
+			import * as THREE from '/build/three.module.js';
+			import { OBJLoader } from '/examples/jsm/loaders/OBJLoader.js';
 			var container;
 			var camera, scene, renderer;
 			var mouseX = 0, mouseY = 0;
@@ -48,7 +48,7 @@
 				};
 				// texture
 				var textureLoader = new THREE.TextureLoader( manager );
-				var texture = textureLoader.load( 'textures/uv_grid_opengl.jpg' );
+				var texture = textureLoader.load( '/examples/textures/uv_grid_opengl.jpg' );
 				// model
 				function onProgress( xhr ) {
 					if ( xhr.lengthComputable ) {
@@ -58,7 +58,7 @@
 				}
 				function onError() {}
 				var loader = new OBJLoader( manager );
-				loader.load( 'models/obj/male02/male02.obj', function ( obj ) {
+				loader.load( '/examples/models/obj/male02/male02.obj', function ( obj ) {
 					object = obj;
 				}, onProgress, onError );
 				//
