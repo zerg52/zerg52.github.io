@@ -54,14 +54,9 @@
 				objLoader.load( 'ant.obj', function ( object ) {
 					var head = object.children[ 0 ];
 					head.scale.multiplyScalar( 15 );
-					head.position.y = - 500;
+					head.position.z = 500;
 					head.material = cubeMaterial1;
-					var head2 = head.clone();
-					head2.position.x = - 900;
-					head2.material = cubeMaterial2;
-					var head3 = head.clone();
-					head3.material = cubeMaterial3;
-					scene.add( head3 );
+					scene.add( head );
 				} );
 				//renderer
 				renderer = new THREE.WebGLRenderer();
