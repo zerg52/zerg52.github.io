@@ -23,7 +23,7 @@
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 5000 );
-				camera.position.z = 2000;
+				camera.position.z = 0;
 				//cubemap
 				var path = 'examples/textures/cube/';
 				var format = '.jpg';
@@ -55,7 +55,7 @@
 				objLoader.load( 'ant.obj', function ( object ) {
 					var head = object.children[ 0 ];
 					head.scale.multiplyScalar( 10 );
-					head.position.z = 500;
+					head.position.z = 0;
 					head.material = cubeMaterial1;
 					scene.add( head );
 				} );
