@@ -1,6 +1,6 @@
 window.onload = function(){
   var width = window.innerWidth;
-  var height = window.innrerHeight;
+  var height = window.innerHeight;
   var canvas = document.getElementById('canvas');
 
   canvas.setAttribute('width', width);
