@@ -42,9 +42,8 @@
 				var refractionCube = new THREE.CubeTextureLoader().load( urls );
 				refractionCube.mapping = THREE.CubeRefractionMapping;
 				refractionCube.format = THREE.RGBFormat;
-        var color = new THREE.Color( 0xff0000 );
 				scene = new THREE.Scene();
-				scene.background = color;
+				scene.background = reflectionCube;
 				//lights
 				var ambient = new THREE.AmbientLight( 0xffffff );
 				scene.add( ambient );
@@ -57,7 +56,6 @@
 				objLoader.setPath( 'examples/models/obj/' );
 				objLoader.load( 'ant.obj', function ( object ) {
 					var head = object;
-					head.scale.multiplyScalar( 15 );
 					head.material = cubeMaterial;
 				} );
 				//renderer
