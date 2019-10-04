@@ -56,6 +56,7 @@
 				objLoader.setPath( 'examples/models/obj/' );
 				objLoader.load( 'ant.obj', function ( object ) {
 					var head = object;
+          head.scale.multiplyScalar( 15 );
 					head.material = cubeMaterial;
           scene.add(head);
 				} );
