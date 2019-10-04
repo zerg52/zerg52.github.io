@@ -49,9 +49,10 @@
       var cubeMaterial2 = new THREE.MeshLambertMaterial( { color: 0xffee00, envMap: refractionCube, refractionRatio: 0.95 } );
       var cubeMaterial1 = new THREE.MeshLambertMaterial( { color: 0xffffff, envMap: reflectionCube } );
 				//models
-				var objLoader = new OBJLoader();
+        var objLoader = new OBJLoader();
 				objLoader.setPath( 'examples/models/obj/' );
-        var head = object.children[ 0 ];
+				objLoader.load( 'ant.obj', function ( object ) {
+					var head = object.children[ 0 ];
 					head.scale.multiplyScalar( 15 );
 					head.position.y = - 500;
 					head.material = cubeMaterial1;
