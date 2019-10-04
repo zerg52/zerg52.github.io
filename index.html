@@ -45,13 +45,14 @@
 				pointLight = new THREE.PointLight( 0xffffff, 2 );
 				scene.add( pointLight );
 				//materials
-				var cubeMaterial = new THREE.MeshLambertMaterial( { color: 0xffee00, envMap: refractionCube, refractionRatio: 0.95 } );
+				var cubeMaterial1 = new THREE.MeshLambertMaterial( { color: 0xffffff, envMap: reflectionCube } );
 				//models
 				var objLoader = new OBJLoader();
 				objLoader.setPath( 'examples/models/obj/' );
 				objLoader.load( 'ant.obj', function ( object ) {
 					var head = object;
           head.scale.multiplyScalar( 15 );
+          head.position.y = - 500;
 					head.material = cubeMaterial;
           scene.add(head);
 				} );
