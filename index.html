@@ -45,17 +45,23 @@
 				pointLight = new THREE.PointLight( 0xffffff, 2 );
 				scene.add( pointLight );
 				//materials
-				var cubeMaterial = new THREE.MeshLambertMaterial( { color: 0xffffff, envMap: reflectionCube } );
+      var cubeMaterial3 = new THREE.MeshLambertMaterial( { color: 0xff6600, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.3 } );
+      var cubeMaterial2 = new THREE.MeshLambertMaterial( { color: 0xffee00, envMap: refractionCube, refractionRatio: 0.95 } );
+      var cubeMaterial1 = new THREE.MeshLambertMaterial( { color: 0xffffff, envMap: reflectionCube } );
 				//models
 				var objLoader = new OBJLoader();
 				objLoader.setPath( 'examples/models/obj/' );
-				objLoader.load( 'ant.obj', function ( object ) {
-					var head = object;
-          head.scale.multiplyScalar( 15 );
-          head.position.y = - 500;
-          head.position.z = - 500;
-					head.material = cubeMaterial;
-          scene.add(head);
+        var head = object.children[ 0 ];
+					head.scale.multiplyScalar( 15 );
+					head.position.y = - 500;
+					head.material = cubeMaterial1;
+					var head2 = head.clone();
+					head2.position.x = - 900;
+					head2.material = cubeMaterial2;
+					var head3 = head.clone();
+					head3.position.x = 900;
+					head3.material = cubeMaterial3;
+					scene.add( head, head2, head3 );
 				} );
 				//renderer
 				renderer = new THREE.WebGLRenderer();
