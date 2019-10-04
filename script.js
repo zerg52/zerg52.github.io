@@ -18,6 +18,7 @@ window.onload = function(){
   scene.add(light);
 
   var geometry = new THREE.PlaneGeometry(300,300,12,12);
+  var material = new THREE.MeshBasicMaterial({color: 0x00ff00,});
 
   renderer.render(scene, camera);
 }
