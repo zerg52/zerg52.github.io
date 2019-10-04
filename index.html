@@ -1,47 +1,135 @@
-<!DOCTYPE html>
-<html lang="ru" dir="ltr">
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>VIGONKA DESIGN</title>
-    <style media="screen">
-      div {
-     width: 100%;
-      height: 100%;
-      position: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      }
-      img
-      {
-      display: block;
-      width: 80vmin;
-      animation: container4 3500ms infinite  ease-in-out;
-
-}
- @keyframes container4{
- 0%,14% { transform: scale(1,1) }
- 100% { transform: scale(1.25,1.25)}
- }
-      </style>
+    <title></title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/three.js"></script>
+    <style media="screen">
+    html {
+      background:#ededed;
+    }
+    </style>
   </head>
   <body>
-    <div>
-    <img id="hidelogo" src="\logo_v4.5.png" alt="VIGONKA DESIGN BIG LOGO">
-    </div>
+
   </body>
-<script type="text/javascript" charset="utf-8">
+  <script>
+    /////////////////////////////////////////
+// Scene Setup
+/////////////////////////////////////////
 
-  $(document).ready(function(){
-			function hide_obj() {
-				$('#hidelogo').fadeOut(3000, function() {
-					location.replace("/index2.html")
-				});
-			}
-			setTimeout(hide_obj, 500)
-		});
-</script>
+var scene,
+    camera,
+    renderer,
+    controls;
 
+scene = new THREE.Scene();
+
+camera = new THREE.PerspectiveCamera( 10, window.innerWidth / window.innerHeight, 1, 1000 );
+camera.position.set(-5, 12, 10);
+camera.lookAt( scene.position );
+
+renderer = new THREE.WebGLRenderer({
+  alpha: true,
+	antialias: true
+});
+renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setSize( window.innerWidth, window.innerHeight );
+
+document.body.appendChild( renderer.domElement );
+
+
+/////////////////////////////////////////
+// Trackball Controller
+/////////////////////////////////////////
+
+controls = new THREE.TrackballControls( camera );
+controls.rotateSpeed = 5.0;
+controls.zoomSpeed = 3.2;
+controls.panSpeed = 0.8;
+controls.noZoom = false;
+controls.noPan = true;
+controls.staticMoving = false;
+controls.dynamicDampingFactor = 0.2;
+
+
+/////////////////////////////////////////
+// Lighting
+/////////////////////////////////////////
+
+var iphone_color  = '#FAFAFA',
+    ambientLight  = new THREE.AmbientLight( '#EEEEEE' ),
+    hemiLight     = new THREE.HemisphereLight( iphone_color, iphone_color, 0 ),
+    light         = new THREE.PointLight( iphone_color, 1, 100 );
+
+hemiLight.position.set( 0, 50, 0 );
+light.position.set( 0, 20, 10 );
+
+scene.add( ambientLight );
+scene.add( hemiLight );
+scene.add( light );
+
+
+/////////////////////////////////////////
+// Utilities
+/////////////////////////////////////////
+
+var axisHelper = new THREE.AxisHelper( 1.25 );
+scene.add( axisHelper );
+
+
+/////////////////////////////////////////
+// Render Loop
+/////////////////////////////////////////
+
+function renderPhone() {
+  renderer.render( scene, camera );
+}
+
+// Render the scene when the controls have changed.
+// If you don’t have other animations or changes in your scene,
+// you won’t be draining system resources every frame to render a scene.
+controls.addEventListener( 'change', renderPhone );
+
+// Avoid constantly rendering the scene by only
+// updating the controls every requestAnimationFrame
+function animationLoop() {
+  requestAnimationFrame(animationLoop);
+  controls.update();
+}
+
+animationLoop();
+
+
+/////////////////////////////////////////
+// Window Resizing
+/////////////////////////////////////////
+
+window.addEventListener( 'resize', function () {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+	controls.handleResize();
+	renderPhone();
+}, false );
+
+
+/////////////////////////////////////////
+// Object Loader
+/////////////////////////////////////////
+
+var dae,
+    loader = new THREE.ColladaLoader();
+
+function loadCollada( collada ) {
+  dae = collada.scene;
+  dae.position.set(0.4, 0, 0.8);
+  scene.add(dae);
+  renderPhone();
+}
+
+loader.options.convertUpAxis = true;
+loader.load( '/antin.dae', loadCollada);
+  </script>
 </html>
