@@ -45,7 +45,7 @@
 				pointLight = new THREE.PointLight( 0xffffff, 2 );
 				scene.add( pointLight );
 				//materials
-				var cubeMaterial1 = new THREE.MeshLambertMaterial( { color: 0xffffff, envMap: reflectionCube } );
+				var cubeMaterial = new THREE.MeshLambertMaterial( { color: 0xffffff, envMap: reflectionCube } );
 				//models
 				var objLoader = new OBJLoader();
 				objLoader.setPath( 'examples/models/obj/' );
