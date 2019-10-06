@@ -3,11 +3,6 @@
 	<head>
 		<title>three.js webgl - materials - cube reflection / refraction [Walt]</title>
     <style media="screen">
-      div{
-        width:50%;
-        height:100%;
-        border: 2px solid black;
-      }
     </style>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -63,6 +58,7 @@
 					var head = object.children[ 0 ];
 					head.scale.multiplyScalar( 10 );
 					head.position.z = 500;
+					head.position.x = -500;
 					head.material = cubeMaterial1;
 					scene.add( head );
 				} );
