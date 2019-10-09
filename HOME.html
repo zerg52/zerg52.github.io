@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HOME</title>
+    <style media="screen">
+    body {
+margin: 0;
+padding: 0;
+background: #ededed;
+position: absolute;
+height: 100%;
+width: 100%;
+}
+
+.home {
+height: 100%;
+width: 100%;
+display: grid;
+grid-template-rows: 1fr;
+ grid-template-columns: 1fr 1fr;
+align-content: stretch;
+justify-content: stretch;
+font-family: "Arial";
+}
+
+li {
+display:block;
+list-style: none;
+text-decoration:none;
+}
+A:visited {
+color:black;
+ text-decoration: none;
+ }
+
+A:link {
+text-decoration:none;
+color: black;
+font-size: 36px;
+}
+A:HOVER {
+color: GRAY;
+font-size: 36px;
+
+}
+
+.sub{
+display:none;
+}
+
+.view3d {
+display:flex;
+background: white;
+ align-items: center;
+ justify-content: center
+}
+
+.nav {
+display:flex;
+ align-items: center;
+ justify-content: flex-start;
+}
+footer{
+  background: white;
+	padding: 0px 0px 5px 20px;
+	color:#9b9b9b;
+	align-self:end;
+  text-align:center;
+}
+    </style>
+  </head>
+  <body>
+  <div class = "home">
+  <div class = "view3d"></div>
+  <div class = "nav">
+  <ul>
+    <li><a href = "#">VIGONKA</a></li>
+    <li><a id = "menu" href = "#">АРХИТЕКТУРА▽</a></li>
+      <ul id="submenu" class="sub">
+        <li><a href = "#">ЛАНДШАФТ</a></li>
+      </ul>
+    <li><a id = "menu2" href = "#">ДИЗАЙН▽</a></li>
+      <ul id="submenu1" class="sub">
+        <li><a href = "#">ГРАФИКА</a></li>
+        <li><a href = "#">ИНТЕРЬЕР</a></li>
+      </ul>
+    <li><a href = "#">КОНТАКТЫ</a></li>
+    <li><a href = "/PriceCalc.html">ЦЕНЫ</a></li>
+  </ul>
+  </div>
+  	<footer> COPYRIGHT © VIGONKA DESIGN 2019 </footer>
+  </div>
+  </body>
+  <script>
+  document.getElementById("menu").onclick = function() {
+  if(submenu.hasAttribute("class")){
+  submenu.removeAttribute("class");
+  } else {
+  submenu.setAttribute("class","sub");
+  }
+  }
+
+  document.getElementById("menu2").onclick = function() {
+  if(submenu1.hasAttribute("class")){
+  submenu1.removeAttribute("class");
+  } else {
+  submenu1.setAttribute("class","sub");
+  }
+  }
+  </script>
+  </html>
