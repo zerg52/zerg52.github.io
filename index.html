@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -13,24 +12,24 @@
       justify-content: center;
 
       }
-      p
-      {
-      display: block;
-      width: 80vmin;
-      animation: container4 3500ms infinite  ease-in-out;
+      p {
+      font-family: "Arial";
+		font-size: 100px;
+      }
+
+      /*animation: container4 3500ms infinite  ease-in-out;
 
 }
  @keyframes container4{
  0%,14% { transform: scale(1,1) }
  100% { transform: scale(1.25,1.25)}
- }
+ }*/
       </style>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
     <div id="hidelogo">
     <!--<img id="hidelogo" src="\logo_v4.5.png" alt="VIGONKA DESIGN BIG LOGO">-->
-    <p style="font-size:50px;">LOGO</p>
+    <p>LOGO</p>
     </div>
   </body>
 <script>
@@ -38,7 +37,7 @@
   $(document).ready(function(){
 			function hide_obj() {
 				$('#hidelogo').fadeOut(3000, function() {
-					location.replace("/HOME.html")
+					location.replace("#")
 				});
 			}
 			setTimeout(hide_obj, 500)
