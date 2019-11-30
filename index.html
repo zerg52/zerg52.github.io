@@ -61,13 +61,12 @@ body {
   "textcontent"
   "nav"
   "footer";
-  grid-template-rows: 1fr 2fr 1frpx;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr ;
   grid-gap:10px;
  }
 
  .textcontent {
-  border:1px solid;
   grid-area: textcontent;
  }
  .nav {
@@ -107,7 +106,6 @@ body {
  }
 
  .footer {
-  border:1px solid;
   grid-area: footer;
  }
  .footer p {
@@ -120,7 +118,7 @@ p {
 font-family: "HelveticaNeueCyr-Thin";
 font-size: 34px;
 line-height: .75em;
-color: silver;
+color: #7d7d7d;
 text-transform: uppercase;
 margin: 10px 10px 10px 30px;
 }
@@ -145,6 +143,9 @@ background: #ededed;
 animation: nav-after .5s ease-in-out;
 background: transparent;
 
+}
+.archsupport p::first-line  {
+	color:#7d7d7d;
 }
   </style>
   <body>
