@@ -1,47 +1,183 @@
+<!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>VIGONKA DESIGN</title>
-    <style media="screen">
-      div {
-     width: 100%;
-      height: 100%;
-      position: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    <title>HOME</title>
 
-      }
-      p {
-      font-family: "Arial";
-		font-size: 100px;
-      }
+  </head>
+  <style media="screen">
+  @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-moz-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-o-keyframes fade-in {  0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
 
-      /*animation: container4 3500ms infinite  ease-in-out;
+@keyframes nav { 0% { background: transparent; } 100% { background: #ededed; } }
+@keyframes nav-after { 0% { background: #ededed; } 100% { background: transparent; } }
+
+@font-face {
+    font-family: "HelveticaNeueCyr-Thin";
+    src: url("fonts/HelveticaNeueCyr-Thin.woff");
+  }
+
+body {
+  -webkit-animation: fade-in 1.5s ease-in-out;
+  -moz-animation: fade-in 1.5s ease-in-out;
+  -o-animation: fade-in 1.5s ease-in-out;
+  animation: fade-in 1.5s ease-in-out;
+  }
+body {
+  display: grid;
+  grid-template-areas:
+  "leftpanel rightpanel"
+  "leftpanel rightpanel"
+  "leftpanel rightpanel";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 100vh;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  }
+
+
+  .leftpanel {
+   display: inline-grid;
+   grid-area: leftpanel;
+   justify-items: center;
+   align-items: center;
+   background: linear-gradient(90deg, #ffffff 85%, #f4f4f4 100%)
+
+  }
+
+  svg {
+
+    width: 50vmin;
+    height: 50vmin;
 
 }
- @keyframes container4{
- 0%,14% { transform: scale(1,1) }
- 100% { transform: scale(1.25,1.25)}
- }*/
-      </style>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  </head>
-  <body>
-    <div id="hidelogo">
-    <!--<img id="hidelogo" src="\logo_v4.5.png" alt="VIGONKA DESIGN BIG LOGO">-->
-    <p>LOGO</p>
-    </div>
-  </body>
-<script>
-  $(document).ready(function(){
-			function hide_obj() {
-				$('#hidelogo').fadeOut(3000, function() {
-					location.replace("/HOME.html")
-				});
-			}
-			setTimeout(hide_obj, 500)
-		});
-</script>
+.rightpanel {
+   display: inline-grid;
+   grid-area: rightpanel;
+   grid-template-areas:
+  "textcontent"
+  "nav"
+  "footer";
+  grid-template-rows: 1fr 2fr 1frpx;
+  grid-template-columns: 1fr ;
+  grid-gap:10px;
+ }
 
+ .textcontent {
+  border:1px solid;
+  grid-area: textcontent;
+ }
+ .nav {
+
+  display: inline-grid;
+  align-items:center;
+  grid-area: nav;
+  grid-template-rows: .7fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr ;
+  margin-left: 100px;
+  grid-template-areas:
+  "archsupport"
+  "order"
+  "price"
+  "contacts";
+ }
+ .archsupport {
+  display:inline-grid;
+  align-items:center;
+  border-radius:1000px 0px 0px 1000px;
+  grid-area: archsupport;
+ }
+  .order {
+    display:inline-grid;
+  align-items:center;
+    border-radius:1000px 0px 0px 1000px;
+  grid-area: order;
+ }
+  .price {
+    border-radius:1000px 0px 0px 1000px;
+  grid-area: price;
+ }
+  .contacts {
+
+    border-radius:1000px 0px 0px 1000px;
+  grid-area: contacts;
+ }
+
+ .footer {
+  border:1px solid;
+  grid-area: footer;
+ }
+ .footer p {
+  margin-bottom: 50px;
+  margin-left: 100px;
+  font-size: 14px;
+  color: #b4b4b4;
+}
+p {
+font-family: "HelveticaNeueCyr-Thin";
+font-size: 34px;
+line-height: .75em;
+color: silver;
+text-transform: uppercase;
+margin: 10px 10px 10px 30px;
+}
+
+.nav p::first-line {
+color: black;
+
+}
+
+
+A:link {
+text-decoration: none;
+color: black;
+font-size: 36px;
+}
+.nav div:hover {
+animation: nav .5s ease-in-out;
+background: #ededed;
+
+}
+.nav div {
+animation: nav-after .5s ease-in-out;
+background: transparent;
+
+}
+  </style>
+  <body>
+  <div class="leftpanel">
+
+  </div>
+  <div class="rightpanel">
+  	<div class="nav">
+      <div class="archsupport">
+			<a href="#"><p>ARCHSUPPORT</p></a>
+			</div>
+			<div class="order">
+				<a href="#">
+					<p>TO ORDER<br>ЗАКАЗАТЬ</p>
+				</a>
+			</div>
+				<div class="price">
+				<a href="#">
+					<p>PRICE<br>ЦЕНЫ</p>
+				</a>
+			</div>
+				<div class="contacts">
+				<a href="#">
+					<p>CONTACTS<br>КОНТАКТЫ</p>
+				</a>
+			</div>
+  	</div>
+		<div class="textcontent"></div>
+		<div class="footer"><p>COPYRIGHT ARCHSUPPORT 2019</p></div>
+  </div>
+
+  </body>
+  <script>
+
+  </script>
 </html>
