@@ -11,9 +11,6 @@
 @-o-keyframes fade-in {  0% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
 
-@keyframes nav { 0% { background: transparent; } 100% { background: #ededed; } }
-@keyframes nav-after { 0% { background: #ededed; } 100% { background: transparent; } }
-
 @font-face {
     font-family: "HelveticaNeueCyr-Thin";
     src: url("fonts/HelveticaNeueCyr-Thin.woff");
@@ -32,6 +29,14 @@
 	width:100%;
 	overflow:hidden;
 }
+
+body {
+  -webkit-animation: fade-in 1.5s ease-in-out;
+  -moz-animation: fade-in 1.5s ease-in-out;
+  -o-animation: fade-in 1.5s ease-in-out;
+  animation: fade-in 1.5s ease-in-out;
+  }
+  
 .swiper-container {
 	position:relative;
 	height: 100%;
