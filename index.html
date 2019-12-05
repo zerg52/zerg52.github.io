@@ -281,8 +281,9 @@
     color:black !important;
     background:#ededed;
     text-decoration:none;
+  }
 
-    #menu>ul{
+nav.menu>ul{
   padding-left:105vh;
 }
 nav>div.logo {
@@ -297,13 +298,13 @@ nav>div.logo {
   justify-content:center;
 }
 
-div.logo>img {
+nav>div.logo>img {
 
   width:50%;
   transition: width ease-in-out .8s;
 }
 
-div.logo>img:hover {
+nav>div.logo>img:hover {
   width:55%;
   transition: width ease-in-out .8s;
 }
@@ -327,13 +328,10 @@ div.logo>img:hover {
  </div>
 </label>
 <nav id="menu" class = "menu">
-
 <div class="logo">
 <img src="/img/biglogo.svg" alt="Большой логотип ARCHSUPPORT">
 </div>
-
-
- <ul>
+<ul>
    <li class="active"><a href="">ARCHSUPPORT</a></li>
    <li><a href=""><p>TO ORDER<br>ЗАКАЗАТЬ</p></a></li>
    <li><a href=""><p>CONTACTS<br>КОНТАКТЫ</p></a></li>
@@ -402,7 +400,6 @@ div.logo>img:hover {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 </body>
-</html>
   <script>
   $(".icon").click(function () {
   $("#menu").toggleClass("menuafter");
