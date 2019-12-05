@@ -282,6 +282,32 @@
     background:#ededed;
     text-decoration:none;
 
+    #menu>ul{
+  padding-left:105vh;
+}
+nav>div.logo {
+  display:inline-flex;
+  flex:1 1 1;
+  position:absolute;
+  left:0;
+  width: 100vh;
+  height:100%;
+  background:#f3f3f3;
+  align-items:center;
+  justify-content:center;
+}
+
+img {
+
+  width:50%;
+  transition: width ease-in-out .8s;
+}
+
+img:hover {
+  width:55%;
+  transition: width ease-in-out .8s;
+}
+
   }
   </style>
 <!DOCTYPE html>
@@ -292,51 +318,58 @@
   </head>
 <body>
 <link rel="stylesheet" href="/css/swiper.css">
- <div class="swiper-container">
- <div class="g_background">
+<input id="menu1" type="checkbox" name="menu">
+<label class="icon" for="menu1">
+ <div class="line">
  </div>
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-        <!-- Slides -->
+ <div class="line1">
+ </div>
+ <div class="line2">
+ </div>
+</label>
+<nav id="menu" class = "menu">
 
-        <img src="/img/architecture-sketch-house-rhino3D.png" alt="100" id = "one" class="swiper-slide">
-        <img src="/img/architecture-fasad-jiloy-dom-vkr.png" alt="100" id = "one" class="swiper-slide">
-        <img src="/img/architecture-sketch-jiloy-dom.png" alt="100" id = "one" class="swiper-slide">
-    </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
+<div class="logo">
+<img src="/img/biglogo.svg" alt="Большой логотип ARCHSUPPORT">
+</div>
+
+
+ <ul>
+   <li class="active"><a href="">ARCHSUPPORT</a></li>
+   <li><a href=""><p>TO ORDER<br>ЗАКАЗАТЬ</p></a></li>
+   <li><a href=""><p>CONTACTS<br>КОНТАКТЫ</p></a></li>
+   <li><a href=""><p>PRICE<br>ЦЕНЫ</p></a></li>
+ </ul>
+</nav>
+<div class="swiper-container">
+<div class="g_background">
+</div>
+   <!-- Additional required wrapper -->
+   <div class="swiper-wrapper">
+       <!-- Slides -->
+
+       <img src="https://i.ibb.co/J22GxB8/100.png" alt="100" id = "one" class="swiper-slide">
+       <img src="https://i.ibb.co/J22GxB8/100.png" alt="100" id = "two" class="swiper-slide">
+       <img src="https://i.ibb.co/J22GxB8/100.png" alt="100" id = "tree" class="swiper-slide">
+   </div>
+   <!-- If we need pagination -->
+   <div class="swiper-pagination"></div>
 </div>
 
 <div class="right">
-<input id="menu1" type="checkbox" name="menu">
-<label class="icon" for="menu1">
-	<div class="line">
-	</div>
-	<div class="line1">
-	</div>
-	<div class="line2">
-	</div>
-</label>
-<nav id="menu" class = "menu">
-	<ul>
-		<li class="active"><a href="">ARCHSUPPORT</a></li>
-		<li><a href=""><p>TO ORDER<br>ЗАКАЗАТЬ</p></a></li>
-		<li><a href=""><p>CONTACTS<br>КОНТАКТЫ</p></a></li>
-		<li><a href=""><p>PRICE<br>ЦЕНЫ</p></a></li>
-	</ul>
-</nav>
-	<div class="txtcontent">
-	<h1>
-	ARCHSUPPORT
-	</h1>
-	<p class="txt1">
-	Мы - опытная команда специалистов, готовых 24/7 помогать тебе не вылететь из университета или другого учебного заведения раньше времени.
+
+ <div class="txtcontent">
+ <h1>
+ ARCHSUPPORT
+ </h1>
+ <p class="txt1">
+ Мы - опытная команда специалистов, готовых 24/7 помогать тебе не вылететь из университета или другого учебного заведения раньше времени.
 У нас ты можешь заказать курсовой или дипломный проект по архитектуре или другим строительным специальностям, а также отдельные чертежи, РГР и  другие виды <a href="">услуг</a>.
-	</p>
-	<h1 class="spoiler_links">
-	КАКОВЫ НАШИ ПРЕИМУЩЕСТВА?
-	</h1>
-	<p class="txt2 spoiler_body">
+ </p>
+ <h1 class="spoiler_links">
+ КАКОВЫ НАШИ ПРЕИМУЩЕСТВА?
+ </h1>
+ <p class="txt2 spoiler_body">
 1.	Наши сотрудники – люди имеющие реальный опыт проектирования и преподаватели вузов.<br>
 2.	Оказываем помощь на всех этапах разработки – от чертежей до визуализаций.<br>
 3.	Индивидуальный подход к каждому проекту. Мы гарантируем уникальность твоей курсовой работы.<br>
@@ -345,27 +378,27 @@
 6.	Исправляем ошибки и недочеты бесплатно.<br>
 7.	Проводим консультации вплоть до сдачи проекта.<br>
 8.	Мы готовы идти навстречу. Стоимость и сроки выполнения всегда можно согласовать, так же как и личные пожелания к работе.
-	</p>
-	<h1 class="spoiler_links">
-	КАК МЫ РАБОТАЕМ?
-	</h1>
-	<p class="txt3 spoiler_body">
-	1.	<a href="">Свяжись с нами</a>, мы обсудим необходимый объем работ, сроки и цены, ответим на все сопутствующие вопросы. Каждый случай мы рассматриваем индивидуально, поэтому с нами всегда легко договориться.<br>
+ </p>
+ <h1 class="spoiler_links">
+ КАК МЫ РАБОТАЕМ?
+ </h1>
+ <p class="txt3 spoiler_body">
+ 1.	<a href="">Свяжись с нами</a>, мы обсудим необходимый объем работ, сроки и цены, ответим на все сопутствующие вопросы. Каждый случай мы рассматриваем индивидуально, поэтому с нами всегда легко договориться.<br>
 2.	После того, как обговорены детали и получены ответы на все важные вопросы – мы приступаем к выполнению твоего задания.<br>
 3.	Выполняем основную часть проекта, высылаем необходимые скриншоты, после чего происходит предоплата, любым удобным способом, в размере 50% от стоимости всей работы.<br>
 4.	По завершении работы над проектом, осуществляется его полная оплата.<br>
 5.	Если при проверке преподавателем обнаружились неточности и недочеты – мы бесплатно исправим их в кратчайшие сроки.
-	</p>
+ </p>
 
-		<h1 class="spoiler_links">
-	КАКИЕ ГАРАНТИИ?
-	</h1>
-	<p class="txt4 spoiler_body">
-	1.	Мы выписываем чек на любые наши услуги в Сбербанк Онлайн, что является полноценным документом об оплате.<br>
+   <h1 class="spoiler_links">
+ КАКИЕ ГАРАНТИИ?
+ </h1>
+ <p class="txt4 spoiler_body">
+ 1.	Мы выписываем чек на любые наши услуги в Сбербанк Онлайн, что является полноценным документом об оплате.<br>
 2.	Возвращяем деньги на начальных этапах работы, если ты передумал.<br>
 3.	Мы дорожим репутацией и делаем все<br>
-	</p>
-	</div>
+ </p>
+ </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
@@ -390,10 +423,8 @@
       return false;
    });
   });
-
+  
   //http://usefulscript.ru/spoiler_smooth_opening.php
-
-
 
   	var mySwiper = new Swiper('.swiper-container', {
   	  // Optional parameters
