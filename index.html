@@ -7,178 +7,419 @@
   </head>
   <style media="screen">
   @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-@-moz-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-@-o-keyframes fade-in {  0% { opacity: 0; } 100% { opacity: 1; } }
-@keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @-moz-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+  @-o-keyframes fade-in {  0% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
 
-@keyframes nav { 0% { background: transparent; } 100% { background: #ededed; } }
-@keyframes nav-after { 0% { background: #ededed; } 100% { background: transparent; } }
+  @keyframes back-out { 0% { background: #f3f3f3; } 100% { background: transparent; } }
 
-@font-face {
-    font-family: "HelveticaNeueCyr-Thin";
-    src: url("fonts/HelveticaNeueCyr-Thin.woff");
-  }
+  @font-face {
+      font-family: "HelveticaNeueCyr-Thin";
+      src: url("fonts/HelveticaNeueCyr-Thin.woff");
+    }
 
-body {
-  -webkit-animation: fade-in 1.5s ease-in-out;
-  -moz-animation: fade-in 1.5s ease-in-out;
-  -o-animation: fade-in 1.5s ease-in-out;
-  animation: fade-in 1.5s ease-in-out;
-  }
-body {
-  display: grid;
-  grid-template-areas:
-  "leftpanel rightpanel"
-  "leftpanel rightpanel"
-  "leftpanel rightpanel";
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 100vh;
-  height: 100vh;
-  margin: 0;
-  overflow: hidden;
-  }
-
-
-  .leftpanel {
-   display: inline-grid;
-   grid-area: leftpanel;
-   justify-items: center;
-   align-items: center;
-   background: linear-gradient(90deg, #ffffff 85%, #f4f4f4 100%)
+  body{
+  	display:flex;
+  	margin:0;
+  	position:absolute;
+  	height:100%;
+  	width:100%;
+  	overflow:hidden;
+    -webkit-animation: fade-in 1.5s ease-in-out;
+    -moz-animation: fade-in 1.5s ease-in-out;
+    -o-animation: fade-in 1.5s ease-in-out;
+    animation: fade-in 1.5s ease-in-out;
 
   }
 
-  img {
+  .swiper-container {
+  	position:relative;
+  	height: 100%;
+  	width: 100vh;
+  }
+  .g_background {
 
-    width: 50vmin;
-    height: 50vmin;
+  	right:0;
+  	background: linear-gradient(to right, transparent, #f3f3f3);
+  	position: absolute;
+  	display: inline-flex;
+  	height: 100%;
+  	width: 15%;
+  	z-index: 1000;
+  }
 
-}
-.rightpanel {
-   display: inline-grid;
-   grid-area: rightpanel;
-   grid-template-areas:
-  "textcontent"
-  "nav"
-  "footer";
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr ;
-  grid-gap:10px;
- }
 
- .textcontent {
-  grid-area: textcontent;
- }
- .nav {
+  #one {
 
-  display: inline-grid;
+  	background: url(https://i.ibb.co/54TYTcN/PO1.png);
+  	background-size: cover;
+  }
+  #two {
+
+  	background: url(https://i.ibb.co/VNZPLFp/2.png);
+  	background-size: cover;
+  }
+  #tree {
+  	background: url(https://i.ibb.co/X3tsMnL/457.png);
+  	background-size: cover;
+  }
+
+
+
+  .right {
+  	align-content:flex-end;
+  	position:relative;
+  	flex:1 1 auto;
+  	background:white;
+  	height: 100%;
+
+  }
+  .icon {
+  display:flex;
+  position:absolute;
+  height: 45px;
+  width: 45px;
+  background:white;
+  border-radius:100%;
+  margin-top:10px;
   align-items:center;
-  grid-area: nav;
-  grid-template-rows: .7fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr ;
-  margin-left: 100px;
-  grid-template-areas:
-  "archsupport"
-  "order"
-  "price"
-  "contacts";
- }
- .archsupport {
-  display:inline-grid;
-  align-items:center;
-  border-radius:1000px 0px 0px 1000px;
-  grid-area: archsupport;
- }
-  .order {
-    display:inline-grid;
-  align-items:center;
-    border-radius:1000px 0px 0px 1000px;
-  grid-area: order;
- }
-  .price {
-    border-radius:1000px 0px 0px 1000px;
-  grid-area: price;
- }
-  .contacts {
+  justify-content:center;
+  flex-direction:column;
+  right: 10px;
+  opacity:1;
+  transform: scale(1,1);
+  z-index: 999;
+  transition: opacity ease-in-out .5s,scale ease-in-out .5s,background ease-in-out 1.5;
+  cursor:pointer;
+  }
+  .iconafter {
+  	background:transparent;
+  	transition: background ease-in-out 5s;
+  }
+  .line, .line1, .line2 {
 
-    border-radius:1000px 0px 0px 1000px;
-  grid-area: contacts;
- }
+  	background: gray;
+  	height: 4px;
+    width: 25px;
+  	margin:1.5px;
+  	border-radius:2px;
+  	transform: translateY(0px);
+  	transform: rotate(0deg);
+  	transition: rotate ease-in-out .5s,translateY ease-in-out .5s;
 
- .footer {
-  grid-area: footer;
-  align-self: end;
- }
- .footer p {
-  margin-left: 10px;
-  font-size: 16px;
-  color: #b4b4b4;
-}
-p {
-font-family: "HelveticaNeueCyr-Thin";
-font-size: 34px;
-line-height: .75em;
-color: #7d7d7d;
-text-transform: uppercase;
-margin: 10px 10px 10px 30px;
-}
+  }
 
-.nav p::first-line {
-color: black;
+  .lineafter {
+  	position:absolute;
+  	background: gray;
+  	height: 4px;
+    width: 25px;
+  	margin:1.5px;
+  	border-radius:2px;
+  	transform: translateY(7px);
+  	transform: rotate(-45deg);
+  	transform-origin: 50% 50%;
+  	transition: transform ease-in-out .5s;
+  }
+  .line1after {
+  	position:absolute;
+  	background: gray;
+  	height: 4px;
+    width: 25px;
+  	margin:1.5px;
+  	border-radius:2px;
+  	transform: rotate(-45deg);
+  	transform-origin: 50% 50%;
+  	transition: transform ease-in-out .5s;
 
-}
+  }
+  .line2after {
+  	position:absolute;
+  	background: gray;
+  	height: 4px;
+    width: 25px;
+  	margin:1.5px;
+  	border-radius:2px;
+  	transform: translateY(-7px);
+  	transform: rotate(45deg);
+  	transform-origin: 50% 50%;
+  	transition: transform ease-in-out .5s
+
+  }
+
+  .icon:hover{
+  	opacity:0.5;
+  	transform: scale(1.1,1.1);
+  	transition: opacity ease-in-out .5s,scale ease-in-out .5s;
+  }
 
 
-A:link {
-text-decoration: none;
-color: black;
-font-size: 36px;
-}
-.nav div:hover {
-animation: nav .5s ease-in-out;
-background: #ededed;
+  .menu {
+  	display:inline-flex;
+  	right:0;
+  	background:#f3f3f3;
+  	opacity: .5;
+  	position:absolute;
+  	flex:1 1 auto;
+  	height: 100%;
+  	width: 0%;
+  	align-items:center;
+    justify-content:center;
+  	font-size:0px;
+  	transition: width ease .5s,font-size ease .5s;
+  	z-index: 900;
+  	}
+  	.menuafter {
+  	display:inline-flex;
+  	right:0;
+  	background:#f3f3f3;
+  	opacity: 1;
+  	position:absolute;
+  	flex:1 1 auto;
+  	height: 100%;
+  	width: 100%;
+  	align-items:center;
+    justify-content:center;
+  	font-size:24px;
+  	transition: width ease .5s,font-size ease .5s;
+  }
+  input {
+  	display: none;
+  }
+  ul {
+  	list-style:none;
+  	text-align:left;
 
-}
-.nav div {
-animation: nav-after .5s ease-in-out;
-background: transparent;
+  }
 
-}
-.archsupport p::first-line  {
-	color:#7d7d7d;
-}
+  li {
+
+  display: block;
+  margin: 30px 0 0 20px;
+  color: #979797;
+  list-style:none;
+
+  }
+  nav>ul>li>a {
+
+  	font-family: "HelveticaNeueCyr";
+  	font-weight: 100;
+  	text-decoration: none;
+  	color: #979797 !important;
+  	transition: color ease-in-out .5s;
+
+  	}
+
+
+  .txtcontent {
+  	cursor: default;
+  	position:absolute;
+  	margin-top:100px;
+  	font-family: "HelveticaNeueCyr";
+  	font-size: 0.5em !important;
+  	padding-left: 50px;
+  	padding-right: 30px;
+
+  }
+  h1 {
+  	cursor: pointer;
+  	display: block;
+  }
+  .txtcontent > :first-child {
+
+  	cursor: default;
+
+  }
+  .txt1 {
+  	text-align: justify;
+  	position: relative;
+  	font-size: 1.2em;
+
+
+  }
+
+  .txt2, .txt3, .txt4 {
+  	padding:10px;
+  	text-align: justify;
+  	position: relative;
+  	font-size: 1.2em;
+  	border-radius:10px;
+
+  }
+  .spoiler_body {
+  	display:none;
+  	animation: back-out 1.5s ease-in-out;
+  }
+  li>a>p:first-line{
+    color:black;
+  }
+  ul {
+    width:100%;
+  }
+  ul>li {
+    margin:10px 0px 0px 0px;
+    display:inline-flex;
+    align-items: center;
+    padding:10px 0px 10px 30px;
+    width:100%;
+    background: transparent;
+    border-radius:100px 0 0 100px;
+    transition:background ease-in-out .5s;
+  }
+
+  ul>li:hover {
+    background: #ededed;
+    transition:background ease-in-out .5s;
+  }
+
+  li>a>p {
+  text-transform:uppercase;
+  line-height: .75em;
+  padding:0;
+  margin:0;
+  }
+  .active {
+    background:#d7d7d7;
+
+  }
+
+  div.txtcontent>p>a {
+    color:black !important;
+    background:#ededed;
+    text-decoration:none;
+
+  }
   </style>
-  <body>
-  <div class="leftpanel">
-    <img src="img/biglogo.svg" alt="Большой логотип ARCHSUPPORT">
-  </div>
-  <div class="rightpanel">
-  	<div class="nav">
-      <div class="archsupport">
-			<a href="/ARCHSUPPORT.html"><p>ARCHSUPPORT</p></a>
-			</div>
-			<div class="order">
-				<a href="#">
-					<p>TO ORDER<br>ЗАКАЗАТЬ</p>
-				</a>
-			</div>
-				<div class="price">
-				<a href="#">
-					<p>PRICE<br>ЦЕНЫ</p>
-				</a>
-			</div>
-				<div class="contacts">
-				<a href="#">
-					<p>CONTACTS<br>КОНТАКТЫ</p>
-				</a>
-			</div>
-  	</div>
-		<div class="textcontent"></div>
-		<div class="footer"><p>COPYRIGHT ARCHSUPPORT 2019</p></div>
-  </div>
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HOME</title>
+  </head>
+<body>
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+ <div class="swiper-container">
+ <div class="g_background">
+ </div>
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
 
-  </body>
+        <img src="https://i.ibb.co/J22GxB8/100.png" style = "height:50%;width:20% " alt="100" id = "one" class="swiper-slide">
+        <div id = "two" class="swiper-slide"></div>
+        <div id = "tree" class="swiper-slide"></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="right">
+<input id="menu1" type="checkbox" name="menu">
+<label class="icon" for="menu1">
+	<div class="line">
+	</div>
+	<div class="line1">
+	</div>
+	<div class="line2">
+	</div>
+</label>
+<nav id="menu" class = "menu">
+	<ul>
+		<li class="active"><a href="">ARCHSUPPORT</a></li>
+		<li><a href=""><p>TO ORDER<br>ЗАКАЗАТЬ</p></a></li>
+		<li><a href=""><p>CONTACTS<br>КОНТАКТЫ</p></a></li>
+		<li><a href=""><p>PRICE<br>ЦЕНЫ</p></a></li>
+	</ul>
+</nav>
+	<div class="txtcontent">
+	<h1>
+	ARCHSUPPORT
+	</h1>
+	<p class="txt1">
+	Мы - опытная команда специалистов, готовых 24/7 помогать тебе не вылететь из университета или другого учебного заведения раньше времени.
+У нас ты можешь заказать курсовой или дипломный проект по архитектуре или другим строительным специальностям, а также отдельные чертежи, РГР и  другие виды <a href="">услуг</a>.
+	</p>
+	<h1 class="spoiler_links">
+	КАКОВЫ НАШИ ПРЕИМУЩЕСТВА?
+	</h1>
+	<p class="txt2 spoiler_body">
+1.	Наши сотрудники – люди имеющие реальный опыт проектирования и преподаватели вузов.<br>
+2.	Оказываем помощь на всех этапах разработки – от чертежей до визуализаций.<br>
+3.	Индивидуальный подход к каждому проекту. Мы гарантируем уникальность твоей курсовой работы.<br>
+4.	Делаем работу красиво и качественно в строгом соответствии с заданием, нормативно правовой базой и твоими пожеланиями.<br>
+5.	Понимаем, как ценно время и вовремя сданные работы.<br>
+6.	Исправляем ошибки и недочеты бесплатно.<br>
+7.	Проводим консультации вплоть до сдачи проекта.<br>
+8.	Мы готовы идти навстречу. Стоимость и сроки выполнения всегда можно согласовать, так же как и личные пожелания к работе.
+	</p>
+	<h1 class="spoiler_links">
+	КАК МЫ РАБОТАЕМ?
+	</h1>
+	<p class="txt3 spoiler_body">
+	1.	<a href="">Свяжись с нами</a>, мы обсудим необходимый объем работ, сроки и цены, ответим на все сопутствующие вопросы. Каждый случай мы рассматриваем индивидуально, поэтому с нами всегда легко договориться.<br>
+2.	После того, как обговорены детали и получены ответы на все важные вопросы – мы приступаем к выполнению твоего задания.<br>
+3.	Выполняем основную часть проекта, высылаем необходимые скриншоты, после чего происходит предоплата, любым удобным способом, в размере 50% от стоимости всей работы.<br>
+4.	По завершении работы над проектом, осуществляется его полная оплата.<br>
+5.	Если при проверке преподавателем обнаружились неточности и недочеты – мы бесплатно исправим их в кратчайшие сроки.
+	</p>
+
+		<h1 class="spoiler_links">
+	КАКИЕ ГАРАНТИИ?
+	</h1>
+	<p class="txt4 spoiler_body">
+	1.	Мы выписываем чек на любые наши услуги в Сбербанк Онлайн, что является полноценным документом об оплате.<br>
+2.	Возвращяем деньги на начальных этапах работы, если ты передумал.<br>
+3.	Мы дорожим репутацией и делаем все<br>
+	</p>
+	</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+</body>
+</html>
   <script>
+  $(".icon").click(function () {
+  $("#menu").toggleClass("menuafter");
+  $(".line").toggleClass("lineafter");
+  $(".line1").toggleClass("line1after");
+  $(".line2").toggleClass("line2after");
+  $(".icon").toggleClass("iconafter");
+   });
 
+   $(document).ready(function(){
+   $('.spoiler_links').click(function(){
+      if ($(this).next('.spoiler_body').css("display")=="none") {
+          $('.spoiler_body').hide('normal');
+          $(this).next('.spoiler_body').slideToggle('normal');
+      }
+      else $('.spoiler_body').hide('normal');
+      return false;
+   });
+  });
+
+  //http://usefulscript.ru/spoiler_smooth_opening.php
+
+
+
+  	var mySwiper = new Swiper('.swiper-container', {
+  	  // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+  		effect:'fade',
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+  			type: 'bullets',
+  			clickable: true
+      },
+    autoplay: {
+      delay: 4000,
+  		disableOnInteraction: false
+    },
+  	fadeEffect: {
+      crossFade: true
+    },
+  });
   </script>
 </html>
