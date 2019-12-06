@@ -19,7 +19,7 @@
     -moz-animation: fade-in 1.5s ease-in-out;
     -o-animation: fade-in 1.5s ease-in-out;
     animation: fade-in 1.5s ease-in-out;
-    font-family: HelveticaNeueCyr-Thin;
+    font-family: "HelveticaNeueCyr-Thin";
   }
   .swiper-container {
   	position:relative;
