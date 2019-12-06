@@ -1,372 +1,61 @@
+
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>HOME</title>
-
-  </head>
-  <style media="screen">
-  @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-  @-moz-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-  @-o-keyframes fade-in {  0% { opacity: 0; } 100% { opacity: 1; } }
-  @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-
-  @keyframes back-out { 0% { background: #f3f3f3; } 100% { background: transparent; } }
-
-  @font-face {
-      font-family: "HelveticaNeueCyr-Thin";
-      src: url("fonts/HelveticaNeueCyr-Thin.woff");
-    }
-    @font-face {
-        font-family: "HelveticaNeueCyr-Light";
-        src: url("fonts/HelveticaNeueCyr-Light.ttf");
-      }
-
-
-  body{
-  	display:flex;
-  	margin:0;
-  	position:absolute;
-  	height:100%;
-  	width:100%;
-  	overflow:hidden;
-    -webkit-animation: fade-in 1.5s ease-in-out;
-    -moz-animation: fade-in 1.5s ease-in-out;
-    -o-animation: fade-in 1.5s ease-in-out;
-    animation: fade-in 1.5s ease-in-out;
-
-  }
-
-  .swiper-container {
-  	position:relative;
-  	height: 100%;
-  	width: 100vh;
-    flex:0 0 auto;
-  }
-  .g_background {
-
-  	right:0;
-  	background: linear-gradient(to right, white, #f3f3f3);
-  	position: absolute;
-  	display: inline-flex;
-  	height: 100%;
-  	width: 5%;
-  	z-index: 1000;
-  }
-
-  .right {
-  	align-content:flex-end;
-  	position:relative;
-  	flex:1 1 auto;
-  	background:white;
-  	height: 100%;
-
-  }
-  .icon {
-  display:flex;
-  position:absolute;
-  height: 45px;
-  width: 45px;
-  background:white;
-  border-radius:100%;
-  margin-top:10px;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  right: 10px;
-  opacity:1;
-  transform: scale(1,1);
-  z-index: 999;
-  transition: opacity ease-in-out .5s,scale ease-in-out .5s,background ease-in-out 1.5;
-  cursor:pointer;
-  }
-  .iconafter {
-  	background:transparent;
-  	transition: background ease-in-out 5s;
-  }
-  .line, .line1, .line2 {
-
-  	background: gray;
-  	height: 4px;
-    width: 25px;
-  	margin:1.5px;
-  	border-radius:2px;
-  	transform: translateY(0px);
-  	transform: rotate(0deg);
-  	transition: rotate ease-in-out .5s,translateY ease-in-out .5s;
-
-  }
-
-  .lineafter {
-  	position:absolute;
-  	background: gray;
-  	height: 4px;
-    width: 25px;
-  	margin:1.5px;
-  	border-radius:2px;
-  	transform: translateY(7px);
-  	transform: rotate(-45deg);
-  	transform-origin: 50% 50%;
-  	transition: transform ease-in-out .5s;
-  }
-  .line1after {
-  	position:absolute;
-  	background: gray;
-  	height: 4px;
-    width: 25px;
-  	margin:1.5px;
-  	border-radius:2px;
-  	transform: rotate(-45deg);
-  	transform-origin: 50% 50%;
-  	transition: transform ease-in-out .5s;
-
-  }
-  .line2after {
-  	position:absolute;
-  	background: gray;
-  	height: 4px;
-    width: 25px;
-  	margin:1.5px;
-  	border-radius:2px;
-  	transform: translateY(-7px);
-  	transform: rotate(45deg);
-  	transform-origin: 50% 50%;
-  	transition: transform ease-in-out .5s
-
-  }
-
-  .icon:hover{
-  	opacity:0.5;
-  	transform: scale(1.1,1.1);
-  	transition: opacity ease-in-out .5s,scale ease-in-out .5s;
-  }
-
-
-  .menu {
-	display:inline-flex;
-	right:0;
-	background:#f3f3f3;
-	opacity: .5;
-	position:absolute;
-	flex:0 0 auto;
-	height: 100%;
-	width: 0%;
-	align-items:center;
-  justify-content:center;
-	font-size:0px;
-	transition: width ease .5s,font-size ease .5s;
-	z-index: 900;
-	}
-	.menuafter {
-	display:inline-flex;
-	right:0;
-	background:#f3f3f3;
-	opacity: 1;
-	position:absolute;
-	flex:0 0 auto;
-	height: 100%;
-	width: 100%;
-	align-items:center;
-  justify-content:center;
-	font-size:24px;
-	transition: width ease .5s,font-size ease .5s;
-}
-  input {
-  	display: none;
-  }
-  ul {
-  	list-style:none;
-  	text-align:left;
-
-  }
-
-  li {
-
-  display: block;
-  margin: 30px 0 0 20px;
-  color: #979797;
-  list-style:none;
-
-  }
-  nav>ul>li>a {
-
-  	font-family: "HelveticaNeueCyr-Thin";
-  	text-decoration: none;
-  	color: #979797 !important;
-  	transition: color ease-in-out .5s;
-
-  	}
-
-
-  .txtcontent {
-  	cursor: default;
-  	position:absolute;
-  	margin-top:100px;
-  	font-family: "HelveticaNeueCyr-Thin";
-  	font-size: 18px;
-  	padding-left: 50px;
-  	padding-right: 30px;
-    font-weight:100;
-
-  }
-  h1 {
-    font-size: 24px;
-    font-family: "HelveticaNeueCyr-Light";
-  	cursor: pointer;
-  	display: block;
-    font-weight:100;
-  }
-  .txtcontent > :first-child {
-
-  	cursor: default;
-
-  }
-  .txt1 {
-  	text-align: justify;
-  	position: relative;
-  	font-size: 1.2em;
-
-
-  }
-
-  .txt2, .txt3, .txt4 {
-  	padding:10px;
-  	text-align: justify;
-  	position: relative;
-  	font-size: 1.2em;
-  	border-radius:10px;
-
-  }
-  .spoiler_body {
-  	display:none;
-  	animation: back-out 1.5s ease-in-out;
-  }
-  li>a>p:first-line{
-    color:black;
-  }
-  ul {
-    font-size:34px;
-    width:100%;
-  }
-  ul>li {
-    margin:10px 0px 0px 0px;
-    display:inline-flex;
-    align-items: center;
-    padding:10px 0px 10px 30px;
-    width:100%;
-    background: transparent;
-    border-radius:100px 0 0 100px;
-    transition:background ease-in-out .5s;
-  }
-
-  ul>li:hover {
-    background: #ededed;
-    transition:background ease-in-out .5s;
-  }
-
-  li>a>p {
-  text-transform:uppercase;
-  line-height: .75em;
-  padding:0;
-  margin:0;
-  }
-  .active {
-    background:#d7d7d7;
-    font-weight: 100;
-    font-family: "HelveticaNeueCyr-Light";
-
-  }
-
-  div.txtcontent>p>a {
-    color:black !important;
-    background:#ededed;
-    text-decoration:none;
-  }
-
-nav.menu>ul{
-  padding-left:105vh;
-}
-nav>div.logo {
-  display:inline-flex;
-  flex:1 1 1;
-  position:absolute;
-  left:0;
-  width: 100vh;
-  height:100%;
-  background: linear-gradient(to right, white, #f3f3f3);
-  align-items:center;
-  justify-content:center;
-}
-
-nav>div.logo>img {
-
-  width:50%;
-  transition: width ease-in-out .8s;
-}
-
-nav>div.logo>img:hover {
-  width:55%;
-  transition: width ease-in-out .8s;
-}
-
-  </style>
-<!DOCTYPE html>
-<html lang="ru" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>HOME</title>
+		<link rel="stylesheet" href="/css/swiper.css">
+    <link rel="stylesheet" href="/css/home.css">
   </head>
 <body>
-<link rel="stylesheet" href="/css/swiper.css">
-<input id="menu1" type="checkbox" name="menu">
-<label class="icon" for="menu1">
- <div class="line">
- </div>
- <div class="line1">
- </div>
- <div class="line2">
- </div>
-</label>
-<nav id="menu" class = "menu">
 <div class="logo">
-<img src="/img/biglogo.svg" alt="Большой логотип ARCHSUPPORT">
+<img src="/img/biglogo.svg">
 </div>
-<ul>
-   <li class="active"><a href="">ARCHSUPPORT</a></li>
-   <li><a href=""><p>TO ORDER<br>ЗАКАЗАТЬ</p></a></li>
-   <li><a href=""><p>CONTACTS<br>КОНТАКТЫ</p></a></li>
-   <li><a href=""><p>PRICE<br>ЦЕНЫ</p></a></li>
- </ul>
-</nav>
-<div class="swiper-container">
-<div class="g_background">
-</div>
-   <!-- Additional required wrapper -->
-   <div class="swiper-wrapper">
-       <!-- Slides -->
 
-       <img src="img/architecture-fasad-jiloy-dom-vkr.png" alt="100" id = "one" class="swiper-slide">
-       <img src="img/architecture-sketch-house-rhino3D.png" alt="100" id = "two" class="swiper-slide">
-       <img src="img/architecture-sketch-jiloy-dom.png" alt="100" id = "tree" class="swiper-slide">
-   </div>
-   <!-- If we need pagination -->
-   <div class="swiper-pagination"></div>
+ <div class="swiper-container">
+ <div class="g_background">
+ </div>
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <img src="/img/architecture-fasad-jiloy-dom-vkr.png" alt="100" id = "one" class="swiper-slide">
+        <img src="/img/architecture-sketch-house-rhino3D.png" alt="100" id = "one" class="swiper-slide">
+        <img src="/img/architecture-sketch-jiloy-dom.png" alt="100" id = "one" class="swiper-slide">
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
 </div>
 
 <div class="right">
-
- <div class="txtcontent">
- <h1>
- ARCHSUPPORT
- </h1>
- <p class="txt1">
- Мы - опытная команда специалистов, готовых 24/7 помогать тебе не вылететь из университета или другого учебного заведения раньше времени.
+<input id="menu1" type="checkbox" name="menu">
+<label class="icon" for="menu1">
+	<div class="line">
+	</div>
+	<div class="line1">
+	</div>
+	<div class="line2">
+	</div>
+</label>
+<nav id="menu" class = "menu">
+	<ul>
+		<li class="active"><a href="">ARCHSUPPORT</a></li>
+		<li><a href=""><p>TO ORDER<br>ЗАКАЗАТЬ</p></a></li>
+		<li><a href=""><p>CONTACTS<br>КОНТАКТЫ</p></a></li>
+		<li><a href=""><p>PRICE<br>ЦЕНЫ</p></a></li>
+	</ul>
+</nav>
+	<div class="txtcontent">
+	<h1>
+	ARCHSUPPORT
+	</h1>
+	<p class="txt1">
+	Мы - опытная команда специалистов, готовых 24/7 помогать тебе не вылететь из университета или другого учебного заведения раньше времени.
 У нас ты можешь заказать курсовой или дипломный проект по архитектуре или другим строительным специальностям, а также отдельные чертежи, РГР и  другие виды <a href="">услуг</a>.
- </p>
- <h1 class="spoiler_links">
- КАКОВЫ НАШИ ПРЕИМУЩЕСТВА?
- </h1>
- <p class="txt2 spoiler_body">
+	</p>
+	<h1 class="spoiler_links">
+	КАКОВЫ НАШИ ПРЕИМУЩЕСТВА?
+	</h1>
+	<p class="txt2 spoiler_body">
 1.	Наши сотрудники – люди имеющие реальный опыт проектирования и преподаватели вузов.<br>
 2.	Оказываем помощь на всех этапах разработки – от чертежей до визуализаций.<br>
 3.	Индивидуальный подход к каждому проекту. Мы гарантируем уникальность твоей курсовой работы.<br>
@@ -375,72 +64,30 @@ nav>div.logo>img:hover {
 6.	Исправляем ошибки и недочеты бесплатно.<br>
 7.	Проводим консультации вплоть до сдачи проекта.<br>
 8.	Мы готовы идти навстречу. Стоимость и сроки выполнения всегда можно согласовать, так же как и личные пожелания к работе.
- </p>
- <h1 class="spoiler_links">
- КАК МЫ РАБОТАЕМ?
- </h1>
- <p class="txt3 spoiler_body">
- 1.	<a href="">Свяжись с нами</a>, мы обсудим необходимый объем работ, сроки и цены, ответим на все сопутствующие вопросы. Каждый случай мы рассматриваем индивидуально, поэтому с нами всегда легко договориться.<br>
+	</p>
+	<h1 class="spoiler_links">
+	КАК МЫ РАБОТАЕМ?
+	</h1>
+	<p class="txt3 spoiler_body">
+	1.	<a href="">Свяжись с нами</a>, мы обсудим необходимый объем работ, сроки и цены, ответим на все сопутствующие вопросы. Каждый случай мы рассматриваем индивидуально, поэтому с нами всегда легко договориться.<br>
 2.	После того, как обговорены детали и получены ответы на все важные вопросы – мы приступаем к выполнению твоего задания.<br>
 3.	Выполняем основную часть проекта, высылаем необходимые скриншоты, после чего происходит предоплата, любым удобным способом, в размере 50% от стоимости всей работы.<br>
 4.	По завершении работы над проектом, осуществляется его полная оплата.<br>
 5.	Если при проверке преподавателем обнаружились неточности и недочеты – мы бесплатно исправим их в кратчайшие сроки.
- </p>
+	</p>
 
-   <h1 class="spoiler_links">
- КАКИЕ ГАРАНТИИ?
- </h1>
- <p class="txt4 spoiler_body">
- 1.	Мы выписываем чек на любые наши услуги в Сбербанк Онлайн, что является полноценным документом об оплате.<br>
+		<h1 class="spoiler_links">
+	КАКИЕ ГАРАНТИИ?
+	</h1>
+	<p class="txt4 spoiler_body">
+	1.	Мы выписываем чек на любые наши услуги в Сбербанк Онлайн, что является полноценным документом об оплате.<br>
 2.	Возвращяем деньги на начальных этапах работы, если ты передумал.<br>
 3.	Мы дорожим репутацией и делаем все<br>
- </p>
- </div>
+	</p>
+	</div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="js/home.js"></script>
 </body>
-  <script>
-  $(".icon").click(function () {
-  $("#menu").toggleClass("menuafter");
-  $(".line").toggleClass("lineafter");
-  $(".line1").toggleClass("line1after");
-  $(".line2").toggleClass("line2after");
-  $(".icon").toggleClass("iconafter");
-   });
-
-   $(document).ready(function(){
-   $('.spoiler_links').click(function(){
-      if ($(this).next('.spoiler_body').css("display")=="none") {
-          $('.spoiler_body').hide('normal');
-          $(this).next('.spoiler_body').slideToggle('normal');
-      }
-      else $('.spoiler_body').hide('normal');
-      return false;
-   });
-  });
-
-  //http://usefulscript.ru/spoiler_smooth_opening.php
-
-  	var mySwiper = new Swiper('.swiper-container', {
-  	  // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-  		effect:'fade',
-
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-  			type: 'bullets',
-  			clickable: true
-      },
-    autoplay: {
-      delay: 4000,
-  		disableOnInteraction: false
-    },
-  	fadeEffect: {
-      crossFade: true
-    },
-  });
-  </script>
 </html>
