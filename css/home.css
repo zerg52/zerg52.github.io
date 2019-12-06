@@ -6,7 +6,7 @@
 
   @font-face {
       font-family: "HelveticaNeueCyr-Thin";
-      src: url("fonts/HelveticaNeueCyr-Thin.woff");
+      src: url("/fonts/HelveticaNeueCyr-Thin.ttf");
     }
   body{
   	display:flex;
