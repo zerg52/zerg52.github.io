@@ -181,10 +181,7 @@
   	padding-left: 50px;
   	padding-right: 30px;
   }
-  div.txtcontent>p {
 
-    line-height: 1;
-  }
   h1 {
     font-weight: 400;
   	font-size:24px;
@@ -281,4 +278,8 @@ div.logo>img:hover {
 	z-index:1000;
 	opacity:1;
 	transition: opacity ease-in-out 1s;
+}
+
+div.txtcontent>p {
+  line-height:.5;
 }
