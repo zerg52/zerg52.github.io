@@ -167,7 +167,7 @@ height: 100%;
   list-style:none;
   }
   nav>ul>li>a {
-  	font-family: "HelveticaNeueCyr-Thin";
+
   	font-weight: 100;
   	text-decoration: none;
   	color: #979797 !important;
@@ -177,13 +177,11 @@ height: 100%;
   	cursor: default;
   	position:absolute;
   	margin-top:100px;
-  	font-family: "HelveticaNeueCyr-Thin";
   	font-size: 16px;
   	padding-left: 50px;
   	padding-right: 30px;
   }
   h1 {
-    font-family: "HelveticaNeueCyr-Thin";
     font-weight: 400;
   	font-size:24px;
   	cursor: pointer;
