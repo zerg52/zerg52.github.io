@@ -33,7 +33,7 @@ div.right {
  overflow-x:hidden;
  flex:1 1 auto;
  padding-left:50px;
- padding-right:30px;
+ padding-right:60px;
 }
 ::-webkit-scrollbar { position:absolute;z-index:9999; width: 5px; }
 ::-webkit-scrollbar-button {  display: none; }
@@ -273,10 +273,11 @@ text-decoration: none;
  div.legend {
    height:50px;
    font-family:"SONGER SemiExpanded";
+   font-weight:700;
    font-size:30px;
    width:100%;
    display:inline-flex;
-   justify-content:space-around;
+   justify-items:space-around;
    align-items:center;
    margin:0;
    margin-top:10px;
@@ -286,8 +287,18 @@ text-decoration: none;
  div.legend>p{
  margin:0;
  padding:0;
+ text-align:left;
 
  }
+
+ div.legend>p:first-child{
+ margin-right:25%;
+ }
+ div.legend>p:last-child{
+ margin-left:5%;
+ }
+
+
 
  div.clock{
  display: block;
@@ -337,13 +348,16 @@ text-decoration: none;
  }
  .txtcontent {
    line-height:1.2;
-   text-align: justify;
+   text-align: left;
+   font-size: 18px;
  }
-
+ div.txtcontent>p:first-line {
+   padding-left:10px;
+   margin-left:10px;
+ }
  .txtcontent>p>a{
 
      color:black ;
-     font-size: 14px;
      background:#ededed;
 
 
