@@ -314,7 +314,7 @@ text-decoration: none;
    padding:0;
    width:4px;
    height: 30px;
-   background:linear-gradient(to top, transparent 50%,#ededed 50%);
+   background:linear-gradient(to top, transparent 50%,#d7d7d7  50%);
    border-radius:20px;
    transform-origin:50% 50%;
    --rotate-2:0deg;
