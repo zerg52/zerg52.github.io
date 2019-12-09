@@ -18,9 +18,9 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        <img src="/img/architecture-fasad-jiloy-dom-vkr.png" alt="100" id = "one" class="swiper-slide">
-        <img src="/img/architecture-sketch-house-rhino3D.png" alt="100" id = "one" class="swiper-slide">
-        <img src="/img/architecture-sketch-jiloy-dom.png" alt="100" id = "one" class="swiper-slide">
+        <img src="/img/architecture-fasad-jiloy-dom-vkr.png" alt="100"  class="swiper-slide">
+        <img src="/img/architecture-sketch-house-rhino3D.png" alt="100"  class="swiper-slide">
+        <img src="/img/architecture-sketch-jiloy-dom.png" alt="100" class="swiper-slide">
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
@@ -38,10 +38,10 @@
 </label>
 <nav id="menu" class = "menu">
 	<ul>
-		<li class="active"><a href="">ARCHSUPPORT</a></li>
+		<li class="active"><a href="/index.html">ARCHSUPPORT</a></li>
 		<li><a href=""><p>TO ORDER<br>ЗАКАЗАТЬ</p></a></li>
 		<li><a href=""><p>CONTACTS<br>КОНТАКТЫ</p></a></li>
-		<li><a href=""><p>PRICE<br>ЦЕНЫ</p></a></li>
+		<li><a href="/PRICE-3DVISUALISED"><p>PRICE<br>ЦЕНЫ</p></a></li>
 	</ul>
 </nav>
 	<div class="txtcontent">
@@ -50,26 +50,19 @@
 	</h1>
 	<p class="txt1">
 	Мы - опытная команда специалистов, готовых 24/7 помогать тебе не вылететь из университета или другого учебного заведения раньше времени.
-У нас ты можешь заказать курсовой или дипломный проект по архитектуре или другим строительным специальностям, а также отдельные чертежи, РГР и  другие виды <a href="">услуг</a>.
+У нас ты можешь заказать курсовой или дипломный проект по архитектуре или другим строительным специальностям, а также отдельные чертежи, РГР и  другие виды <a href="/PRICE-3DVISUALISED">услуг</a>.
 	</p>
 	<h1 class="spoiler_links">
 	КАКОВЫ НАШИ ПРЕИМУЩЕСТВА?
 	</h1>
 	<p class="txt2 spoiler_body">
 1.	Наши сотрудники – люди имеющие реальный опыт проектирования и преподаватели вузов.<br>
-<br>
 2.	Оказываем помощь на всех этапах разработки – от чертежей до визуализаций.<br>
-<br>
 3.	Индивидуальный подход к каждому проекту. Мы гарантируем уникальность твоей курсовой работы.<br>
-<br>
 4.	Делаем работу красиво и качественно в строгом соответствии с заданием, нормативно правовой базой и твоими пожеланиями.<br>
-<br>
 5.	Понимаем, как ценно время и вовремя сданные работы.<br>
-<br>
 6.	Исправляем ошибки и недочеты бесплатно.<br>
-<br>
 7.	Проводим консультации вплоть до сдачи проекта.<br>
-<br>
 8.	Мы готовы идти навстречу. Стоимость и сроки выполнения всегда можно согласовать, так же как и личные пожелания к работе.
 	</p>
 	<h1 class="spoiler_links">
@@ -77,13 +70,9 @@
 	</h1>
 	<p class="txt3 spoiler_body">
 	1.	<a href="">Свяжись с нами</a>, мы обсудим необходимый объем работ, сроки и цены, ответим на все сопутствующие вопросы. Каждый случай мы рассматриваем индивидуально, поэтому с нами всегда легко договориться.<br>
-  <br>
 2.	После того, как обговорены детали и получены ответы на все важные вопросы – мы приступаем к выполнению твоего задания.<br>
-<br>
 3.	Выполняем основную часть проекта, высылаем необходимые скриншоты, после чего происходит предоплата, любым удобным способом, в размере 50% от стоимости всей работы.<br>
-<br>
 4.	По завершении работы над проектом, осуществляется его полная оплата.<br>
-<br>
 5.	Если при проверке преподавателем обнаружились неточности и недочеты – мы бесплатно исправим их в кратчайшие сроки.
 	</p>
 
@@ -92,13 +81,33 @@
 	</h1>
 	<p class="txt4 spoiler_body">
 1.	Мы выписываем чек на любые наши услуги в Сбербанк Онлайн, что является полноценным документом об оплате.<br>
-<br>
-2.	Мы дорожим репутацией и делаем все чтобы ты остался доволен нашей работой.<br>
+2.	Мы дорожим репутацией и делаем все, чтобы ты остался доволен нашей работой.<br>
 	</p>
 	</div>
 </div>
+<script src="js/home.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-<script src="js/home.js"></script>
+<script>
+var mySwiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  effect:'fade',
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+autoplay: {
+  delay: 4000,
+  disableOnInteraction: false
+},
+fadeEffect: {
+  crossFade: true
+},
+});
+</script>
 </body>
 </html>

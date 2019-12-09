@@ -17,23 +17,3 @@ $(".icon").click(function () {
       return false;
    });
   });
-  //http://usefulscript.ru/spoiler_smooth_opening.php
-  	var mySwiper = new Swiper('.swiper-container', {
-  	  // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-  		effect:'fade',
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-  			type: 'bullets',
-  			clickable: true
-      },
-    autoplay: {
-      delay: 4000,
-  		disableOnInteraction: false
-    },
-  	fadeEffect: {
-      crossFade: true
-    },
-  });
