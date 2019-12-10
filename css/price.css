@@ -6,8 +6,12 @@
 
  @font-face {
      font-family: "HelveticaNeueCyr-Thin";
-     src: url("fonts/HelveticaNeueCyr-Thin.woff");
+     src: url("fonts/HelveticaNeueCyr-Thin.ttf");
    }
+   @font-face {
+       font-family: "SONGER SemiExpanded";
+       src: url("fonts/Songersemiexpandedbold.ttf");
+     }
 
 
 body {
@@ -16,7 +20,7 @@ body {
  padding:0;
  display:flex;
  overflow:hidden;
- font-family: HelveticaNeueCyr;
+ font-family: HelveticaNeueCyr-Thin;
  -webkit-animation: fade-in 1.5s ease-in-out;
    -moz-animation: fade-in 1.5s ease-in-out;
    -o-animation: fade-in 1.5s ease-in-out;
@@ -152,7 +156,7 @@ div.right {
 
 
  nav>ul>li>a {
-   font-family: "HelveticaNeueCyr";
+   font-family: HelveticaNeueCyr-Thin;
    font-weight: 100;
    text-decoration: none;
    color: #979797 !important;
