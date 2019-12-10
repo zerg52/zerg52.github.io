@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 253.8 253.7" style="enable-background:new 0 0 253.8 253.7;" xml:space="preserve">
+<g id="Var2">
+	<g id="Круги">
+	</g>
+	<g id="Иконки_1_">
+		<g>
+			<path style="fill:#343434;" d="M253.8,126.9L253.8,126.9c0,70-56.8,126.8-126.8,126.8h-0.1C56.8,253.7,0,196.9,0,126.9v0
+				C0,56.8,56.8,0,126.9,0h0C196.9,0,253.8,56.8,253.8,126.9z M126.9,243.7c64.4,0,116.8-52.4,116.8-116.8
+				C243.8,62.4,191.3,10,126.9,10S10,62.4,10,126.9c0,64.4,52.4,116.8,116.8,116.8H126.9z"/>
+		</g>
+	</g>
+</g>
+<g id="mail">
+	<polygon style="fill:#343434;" points="69.4,76.8 126.9,131.3 185.4,76.8 	"/>
+	<polygon style="fill:#343434;" points="102.6,121.5 59.9,169.7 59.9,80.6 	"/>
+	<polyline style="fill:#343434;" points="194,169.7 194,80.6 151.2,121.5 	"/>
+	<path style="fill:#343434;" d="M66,176.8l121.8,0L144,127.5l-13.7,12.7c-1.9,1.8-5,1.7-6.8,0L110,127.5L66,176.8z"/>
+</g>
+</svg>
