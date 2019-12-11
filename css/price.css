@@ -6,18 +6,14 @@
 
    @font-face {
    font-family: "HelveticaNeueCyr-Thin";
-   src: url("fonts/HelveticaNeueCyr-Thin.ttf") format("truetype");
+   src: url("/fonts/HelveticaNeueCyr-Thin.ttf") format("truetype");
    font-style: normal;
    font-weight: normal;
     }
 
-   @font-face {
-       font-family: "SONGER SemiExpanded";
-       src: url("fonts/Songersemiexpandedbold.ttf");
-     }
      @font-face {
      font-family: "SONGER SemiExpanded";
-     src: url("fonts/Songersemiexpandedbold.ttf") format("truetype");
+     src: url("/fonts/Songersemiexpandedbold.ttf") format("truetype");
      font-style: normal;
      font-weight: normal;
       }
@@ -28,7 +24,7 @@ body {
  padding:0;
  display:flex;
  overflow:hidden;
- font-family: "HelveticaNeueCyr-Thin";
+ font-family: HelveticaNeueCyr-Thin;
  -webkit-animation: fade-in 1.5s ease-in-out;
    -moz-animation: fade-in 1.5s ease-in-out;
    -o-animation: fade-in 1.5s ease-in-out;
@@ -283,7 +279,7 @@ text-decoration: none;
  }
  div.legend {
    height:50px;
-   font-family:"SONGER SemiExpanded";
+   font-family: SONGER SemiExpanded;
    font-weight:700;
    font-size:30px;
    width:100%;
