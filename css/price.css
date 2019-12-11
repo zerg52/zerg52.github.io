@@ -4,15 +4,23 @@
  @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
  @keyframes back-out { 0% { background: #f3f3f3; } 100% { background: transparent; } }
 
- @font-face {
-     font-family: "HelveticaNeueCyr-Thin";
-     src: url("fonts/HelveticaNeueCyr-Thin.ttf");
-   }
+   @font-face {
+   font-family: "HelveticaNeueCyr-Thin";
+   src: url("fonts/HelveticaNeueCyr-Thin.ttf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+    }
+
    @font-face {
        font-family: "SONGER SemiExpanded";
        src: url("fonts/Songersemiexpandedbold.ttf");
      }
-
+     @font-face {
+     font-family: "SONGER SemiExpanded";
+     src: url("fonts/Songersemiexpandedbold.ttf") format("truetype");
+     font-style: normal;
+     font-weight: normal;
+      }
 
 body {
  --width:calc(100vw - 100vh);
@@ -20,7 +28,7 @@ body {
  padding:0;
  display:flex;
  overflow:hidden;
- font-family: HelveticaNeueCyr-Thin;
+ font-family: "HelveticaNeueCyr-Thin";
  -webkit-animation: fade-in 1.5s ease-in-out;
    -moz-animation: fade-in 1.5s ease-in-out;
    -o-animation: fade-in 1.5s ease-in-out;
@@ -156,7 +164,6 @@ div.right {
 
 
  nav>ul>li>a {
-   font-family: HelveticaNeueCyr-Thin;
    font-weight: 100;
    text-decoration: none;
    color: #979797 !important;
