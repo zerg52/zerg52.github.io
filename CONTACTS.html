@@ -1,50 +1,92 @@
 <!DOCTYPE html>
-<html lang="ru" dir="ltr">
+<html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>CONTACTS</title>
-    <style media="screen">
-
-    @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-  @-moz-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-  @-o-keyframes fade-in {  0% { opacity: 0; } 100% { opacity: 1; } }
-  @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-
-  body {
-    -webkit-animation: fade-in 1.5s ease-in-out;
-    -moz-animation: fade-in 1.5s ease-in-out;
-    -o-animation: fade-in 1.5s ease-in-out;
-    animation: fade-in 1.5s ease-in-out;
-    }
-  body {
-  	margin: 0;
-  	padding: 0;
-  	position: absolute;
-  	height: 100%;
-  	width: 100%;
-  	}
-  div {
-  	height: 100%;
-  	width: 100%;
-  	display: grid;
-  	grid-template-rows: 1fr;
-     grid-template-columns: 1fr;
-  	align-content: stretch;
-  	justify-content: stretch;
-  	background: lightblue;
-  	font-family:"Arial";
-  }
-  div > p {
-  	display:flex;
-     align-items: center;
-     justify-content: center;
-  }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   </head>
+<link rel="stylesheet" href="/css/contacts.css">
   <body>
-    <div><p>ЗДЕСЬ БУДУТ КОНТАКТЫ И ФОРМА ДЛЯ ОТПРАВКИ СООБЩЕНИЙ.</p></div>
-  </body>
-  <script>
 
-  </script>
+    <div class="left">
+      <div class="g_background"></div>
+    </div>
+    <div class="right">
+      <input id="menu1" type="checkbox" name="menu" style="display:none;">
+      <label class="icon" for="menu1">
+        <div class="line">
+        </div>
+        <div class="line1">
+        </div>
+        <div class="line2">
+        </div>
+      </label>
+      <nav id="menu" class="menu">
+        <ul>
+          <li><a href="/index.html">ARCHSUPPORT</a></li>
+          <li><a href="">
+              <p>TO ORDER<br>ЗАКАЗАТЬ</p>
+            </a></li>
+          <li class="active"><a href="/CONTACTS.html">
+              <p>CONTACTS<br>КОНТАКТЫ</p>
+            </a></li>
+          <li ><a href="/price/3DVISUALISED.html">
+              <p>PRICE<br>ЦЕНЫ</p>
+            </a></li>
+        </ul>
+      </nav>
+      <div class="txtcontent">
+        <p>
+				Если у тебя есть вопросы, касаемо работы нашего сервиса, заполни форму <span></span>, мы обязательно свяжемся с тобой.
+        </p>
+        <p>
+          Либо напиши нам на почту:
+        </p>
+        <div  class="mail">
+          <p class="txtcopy">archsupport@gmail.com</p>
+					<img id="copy_icon" class="copy_icon" title="Copy" src='\img\icon\copy.svg'>
+        </div>
+        <p>
+          Закажи обратный звонок через форму или обращайся в мессенджерах:
+        </p>
+        <div class="mail">
+          <p class="txtcopy1">+7-910-205-46-15</p>
+          <img  id="copy_icon1" class="copy_icon" title="Copy" src='\img\icon\copy.svg'>
+        </div>
+        <p>
+          Следи за новостями в соцсетях:
+        </p>
+				<div class="social-media-black">
+					<a href="https://vk.com" title="Вконтакте"><img src='\img\icon\social_icon_vk.svg'></a>
+					<a href="https://www.instagram.com/?hl=ru" title="Instagram"><img src='\img\icon\social_icon_instagram.svg'></a>
+					<a href="https://telegram.org/" title="Telegram"><img src='\img\icon\social_icon_telegram.svg'></a>
+
+				</div>
+      </div>
+    </div>
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+$('#copy_icon').click(function() {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($('.txtcopy').text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+});
+
+$('#copy_icon1').click(function() {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($('.txtcopy1').text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+});
+</script>
+
+<script src="/js/home.js"></script>
+
 </html>
