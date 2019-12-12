@@ -179,7 +179,7 @@
     $mail->FromName  = 'Имя сайта';
     $mail->Subject   = 'Сообщение с формы обратной связи';
     $mail->Body      = $output;
-    $mail->AddAddress( 'support@archsupport.ru' );
+    $mail->AddAddress( 'zergg52@gmail.com' );
     // прикрепляем файлы к письму
     if (isset($files)) {
       foreach ($files as $value) {
