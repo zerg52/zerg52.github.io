@@ -3,12 +3,17 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;}
-	.st1{fill:#FCFCFC;}
-	.st2{font-family:'MyriadPro-Regular';}
-	.st3{font-size:12px;}
+	.st0{fill:#FFFFFF;}
 </style>
 <rect width="24" height="24"/>
-<rect x="4.9" y="5.7" class="st0" width="19.6" height="13.9"/>
-<text transform="matrix(1 0 0 1 4.8823 14.2256)" class="st1 st2 st3">404</text>
+<g>
+	<g>
+		<path class="st0" d="M9.3,3.9v10.2h2v1.6h-2v3.6H7.5v-3.6H0.3v-1.5c0.7-0.8,1.4-1.6,2-2.4c0.7-0.9,1.3-1.7,2-2.6
+			C4.9,8.2,5.5,7.3,6,6.4c0.5-0.9,1-1.7,1.3-2.5H9.3z M2.3,14.1h5.3V6.5C7,7.5,6.5,8.3,6,9c-0.5,0.7-0.9,1.4-1.4,2
+			c-0.4,0.6-0.8,1.1-1.2,1.6C3,13.2,2.6,13.6,2.3,14.1z"/>
+		<path class="st0" d="M17.8,19.5c-1.5,0-2.7-0.7-3.6-2c-0.9-1.3-1.3-3.2-1.3-5.7c0-2.7,0.4-4.8,1.3-6.2c0.9-1.4,2.2-2.1,3.9-2.1
+			c3.2,0,4.8,2.6,4.8,7.9c0,2.6-0.5,4.6-1.4,6S19.4,19.5,17.8,19.5z M18,5.1c-2.2,0-3.3,2.2-3.3,6.7c0,4.2,1.1,6.3,3.2,6.3
+			c2.1,0,3.2-2.1,3.2-6.4C21.2,7.3,20.1,5.1,18,5.1z"/>
+	</g>
+</g>
 </svg>
